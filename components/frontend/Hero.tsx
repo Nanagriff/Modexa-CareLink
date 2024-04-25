@@ -6,31 +6,33 @@ import Image from "next/image";
 // import {google} from "../../assets"
 // import { companyLogos } from "@/constants";
 import SearchBar from "./SearchBar";
+import TransitionText from "./TransitionText";
 
 
 const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative mx-[50px] max-w-6xl bg-white pb-[110px] pt-[70px] dark:bg-dark lg:pt-[100px]">
+      <div className="relative mx-[10px] max-w-6xl bg-white pb-[110px] pt-[70px] dark:bg-dark lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
               <div className="hero-content lg:mt-[-70px]">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208]  text-[22px] lg:text-[40px] xl:text-5xl">
-                  Instant Medical Healthcare, <span className="text-blue">Anywhere</span> 
+                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TransitionText /></span> 
+                  
                 </h1>
-                <p className="mb-8 max-w-[480px] opacity-70 text-base text-body-color dark:text-dark-6">
-                Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
+                <p className="mb-8 mt-5 max-w-[480px] opacity-60 text-base text-justify">
+                  Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
                 </p>
                 {/* SEARCH BAR */}
-                <SearchBar/>
+                <SearchBar />
                 {/* CTA BUTTONS */}
                 <ul className="flex flex-col lg:flex-row mt-[30px] gap-5 items-center">
                   <li>
                     <a
                       href="/#"
-                      className="inline-flex items-center justify-center  rounded-md bg-primary lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium bg-blue"
+                      className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium bg-blue hover:bg-opacity-95"
                     >
                       Get started
                     </a>
@@ -73,7 +75,18 @@ const Hero = () => {
                     </a>
                   </li>
                 </ul>
-                
+
+                {/* STATISTICS TAB ON THE MOBILE PAGE */}
+                <div className="py-4 flex lg:hidden justify-center mt-5 gap-4">
+                  <div className="flex-col flex">
+                    <span className="font-bold text-center text-[18px] text-blue">1000 </span>
+                    <span className="text-sm text-gray-500">Active Users</span>
+                  </div>
+                  <div className="flex-col flex">
+                    <span className="font-bold text-center text-[18px]  text-blue">600 </span>
+                    <span className="text-sm text-gray-500">Active Specialist</span>
+                  </div>
+                </div>
                 <div className="clients text-center pt-14">
                   {/* <h6 className=" lg:text-left text-center text-[22px] lg:[32px] font-bold ">
                     Our Partners
@@ -117,8 +130,8 @@ const Hero = () => {
                     src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
                     alt="hero"
                     className="max-w-full lg:ml-auto"
-                  /> */}
-                  <Image src={doctorImg} className="max-w-full lg:ml-auto "  alt="Doctor img"/>
+                  /> */} 
+                  <Image src={doctorImg} className="max-w-full lg:ml-auto  " alt="Doctor img" />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
                       width="93"
