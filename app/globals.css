@@ -75,3 +75,26 @@
       min-height: 100vh;
     }
   }
+
+  
+  /* Animation for brands logo */
+
+.sliding{
+  animation: slide 40s backwards  infinite;
+
+}
+
+.sliding:hover{
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  0%{
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(90%);
+  }
+
+}
+

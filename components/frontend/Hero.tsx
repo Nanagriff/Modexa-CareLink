@@ -6,7 +6,7 @@ import Image from "next/image";
 // import {google} from "../../assets"
 // import { companyLogos } from "@/constants";
 import SearchBar from "./SearchBar";
-import TransitionText from "./TransitionText";
+// import TransitionText from "./TransitionText";
 import TextAnimation from "./TextAnimation";
 
 
@@ -14,20 +14,20 @@ const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative mx-[10px] max-w-6xl bg-white pb-[110px] pt-[70px] dark:bg-dark lg:pt-[100px]">
+      <div className="relative mx-[10px] max-w-6xl bg-white lg:mt-[60px] pt-[70px] dark:bg-dark lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
               <div className="hero-content lg:mt-[-70px]">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208]  text-[22px] lg:text-[40px] xl:text-5xl">
-                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation/></span>
+                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation /></span>
 
                 </h1>
                 <p className="mb-8 mt-5 max-w-[480px] opacity-60 text-base text-justify">
                   Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
                 </p>
 
-                
+
                 {/* SEARCH BAR */}
                 <SearchBar />
                 {/* CTA BUTTONS */}
@@ -175,6 +175,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </>
   );

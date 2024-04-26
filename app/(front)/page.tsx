@@ -1,14 +1,14 @@
+import { Brands } from "@/components/frontend/Brands";
 import Hero from "@/components/frontend/Hero";
-import MegaMenu from "@/components/frontend/MegaMenu";
+import TabSection from "@/components/frontend/TabSection"
+
 
 export default function Home() {
   return (
    <section >
-    <div className="max-w-5xl">
-    {/* <MegaMenu/> */}
-
-    </div>
     <Hero/>
+    <Brands/>
+    <TabSection/>
    </section>
   );
 }
