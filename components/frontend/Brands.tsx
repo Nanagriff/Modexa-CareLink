@@ -16,7 +16,7 @@ export const Brands = () => {
             className="flex items-center px-[40px] mx-5 justify-center flex-1 h-[8.5rem]"
             key={index}
           >
-            <Image src={logo} alt="logo" className='lg:w-[100px] lg:h-[80px] w-[70px] h-[70px] ' />
+            <Image src={logo!} alt="logo" className='lg:w-[100px] lg:h-[80px] w-[70px] h-[70px] ' />
           </li>
         ))}
       </Marquee>
