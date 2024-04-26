@@ -1,5 +1,5 @@
 import React from "react";
-import TabItems from "./TabItems";
+// import TabItems from "./TabItems";
 
 const TabSection = () => {
   return (
