@@ -7,6 +7,7 @@ import Image from "next/image";
 // import { companyLogos } from "@/constants";
 import SearchBar from "./SearchBar";
 import TransitionText from "./TransitionText";
+import TextAnimation from "./TextAnimation";
 
 
 const Hero = () => {
@@ -19,12 +20,14 @@ const Hero = () => {
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
               <div className="hero-content lg:mt-[-70px]">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208]  text-[22px] lg:text-[40px] xl:text-5xl">
-                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TransitionText /></span> 
-                  
+                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation/></span>
+
                 </h1>
                 <p className="mb-8 mt-5 max-w-[480px] opacity-60 text-base text-justify">
                   Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
                 </p>
+
+                
                 {/* SEARCH BAR */}
                 <SearchBar />
                 {/* CTA BUTTONS */}
@@ -130,7 +133,7 @@ const Hero = () => {
                     src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
                     alt="hero"
                     className="max-w-full lg:ml-auto"
-                  /> */} 
+                  /> */}
                   <Image src={doctorImg} className="max-w-full lg:ml-auto  " alt="Doctor img" />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
