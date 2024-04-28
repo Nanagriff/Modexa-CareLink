@@ -14,7 +14,7 @@ export default function ServiceCard({service}: {service:ServicesProps} ) {
                 alt={service.title}
                  className='w-1/3  object-cover aspect-video' /> */}
             <div className="flex flex-col w-2/3 py-4">
-                <h2>{service.title}</h2>
+                <h2>TeleHealth</h2>
                 <p className='text-[0.6rem]'>90 Doctors available</p>
             </div>
         </Link>

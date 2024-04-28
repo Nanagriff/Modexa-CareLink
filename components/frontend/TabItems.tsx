@@ -4,7 +4,7 @@ import React from 'react'
 import { Tabs } from "flowbite-react"
 // import {MdDashboard} from "react-icons/md"
 // import {HiUserCircle} from "react-icons/hi"
-import { Activity, Microscope, Orbit, Stethoscope, Syringe, X } from 'lucide-react'
+import { Microscope, Orbit, Stethoscope, Syringe } from 'lucide-react'
 import ServicesList from './services/ServicesList'
 import LinkCard from './Doctors/LinkCard'
 
