@@ -1,6 +1,7 @@
 import { Brands } from "@/components/frontend/Brands";
 import Hero from "@/components/frontend/Hero";
 import TabSection from "@/components/frontend/TabSection"
+import ServicesList from "@/components/frontend/services/ServicesList";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <Hero/>
     <Brands/>
     <TabSection/>
+    {/* <ServicesList/> */}
    </section>
   );
 }

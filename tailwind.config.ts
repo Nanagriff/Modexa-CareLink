@@ -21,6 +21,10 @@ const config = {
     extend: {
       colors: {
         blue: '#211C6A',
+        seablue: "#5BBCFF",
+        cyan:"#5356FF",
+        best: "#000066",
+        deepblue: "#11235A",
         regalblue: "#10439F",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
