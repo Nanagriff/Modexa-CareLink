@@ -5,7 +5,7 @@ import { Tabs } from "flowbite-react"
 // import {MdDashboard} from "react-icons/md"
 // import {HiUserCircle} from "react-icons/hi"
 import { Microscope, Orbit, Stethoscope, Syringe } from 'lucide-react'
-import ServicesList from './services/ServicesList'
+// import ServicesList from './services/ServicesList'
 import LinkCard from './Doctors/LinkCard'
 
 export default function TabItems() {
@@ -41,7 +41,7 @@ export default function TabItems() {
         {
             title: "Popular Services",
             icon: Stethoscope,
-            component: <ServicesList data={services}/>,
+            component: <LinkCard className='bg-purple-900'/>,
             content: [],
         },
         {
