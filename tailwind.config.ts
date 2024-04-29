@@ -22,7 +22,9 @@ const config = {
       colors: {
         blue: '#211C6A',
         seablue: "#5BBCFF",
+        lightblue: "#81D4FA",
         cyan:"#5356FF",
+        royalBlue: "#4169E1",
         best: "#000066",
         deepblue: "#11235A",
         regalblue: "#10439F",

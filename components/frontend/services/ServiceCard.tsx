@@ -23,36 +23,19 @@ export default function ServiceCard() {
                 <p className='text-[0.6rem]'>90 Doctors available</p>
             </div>
             
-        </Link><Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
+        </Link>
+        <Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
             <div className="flex flex-col w-2/3 py-4">
                 <h2>Telehealth</h2>
                 <p className='text-[0.6rem]'>90 Doctors available</p>
             </div>
             
-        </Link><Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
+        </Link>
+        <Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
             <div className="flex flex-col w-2/3 py-4">
                 <h2>Telehealth</h2>
                 <p className='text-[0.6rem]'>90 Doctors available</p>
             </div>
-            
-        </Link><Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
-            <div className="flex flex-col w-2/3 py-4">
-                <h2>Telehealth</h2>
-                <p className='text-[0.6rem]'>90 Doctors available</p>
-            </div>
-            
-        </Link><Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
-            <div className="flex flex-col w-2/3 py-4">
-                <h2>Telehealth</h2>
-                <p className='text-[0.6rem]'>90 Doctors available</p>
-            </div>
-            
-        </Link><Link href="#" className='round-md overflow-hidden bg-deepblue text-white hover:bg-slate-800 duration-300 flex gap-4 '>
-            <div className="flex flex-col w-2/3 py-4">
-                <h2>Telehealth</h2>
-                <p className='text-[0.6rem]'>90 Doctors available</p>
-            </div>
-            
         </Link>
         
 
