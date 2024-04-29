@@ -10,8 +10,9 @@ export default function Home() {
    <section>
     <Hero/>
     <Brands/>
-    {/* <TabSection/> */}
     <DoctorsList/>
+
+    {/* <TabSection/> */}
     {/* <ServicesList/> */}
    </section>
   );
