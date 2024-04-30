@@ -44,7 +44,7 @@ const  timeStamps = [
             className='border  bg-white inline-flex flex-col py-4 px-4 rounded-md
             hover:border-gray-400 duration-300 transition-all
      '>
-            <Link href={"#"}>
+            <Link href="/doctors/slug">
                 <h2 className='font-bold uppercase text-[16px] lg:text-2xl tracking-wide'>Diana Boateng, PA</h2>
                 <p className='py-3'>Tse Addo Street, Accra Gh</p>
                 <div className="flex items-center gap-4 py-4">
@@ -83,7 +83,7 @@ const  timeStamps = [
                             {item.time} {item.period}
                             </Link>
                         })}
-                         <Link href="#" className=' px-3 py-2 text-black'>
+                         <Link href="/doctors/slug" className='px-1 py-1 text-center text-black'>
                             More times
                             </Link>
                     </div>

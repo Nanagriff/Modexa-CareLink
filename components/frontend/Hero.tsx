@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative mx-[10px] max-w-6xl bg-white lg:mt-[60px] pt-[70px] dark:bg-dark lg:pt-[100px]">
+      <div className="relative mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
