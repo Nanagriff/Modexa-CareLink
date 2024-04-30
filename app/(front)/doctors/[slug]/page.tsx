@@ -1,4 +1,7 @@
 import DoctorsDetails from '@/components/DoctorsDetails'
+import FixedBookedButton from '@/components/FixedBookedButton'
+import { Button } from '@/components/ui/button'
+import { Plus } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -10,25 +13,26 @@ export default function page() {
         <div className="py-10 px-8">
           <div className="flex items-center justify-between">
             <div className="">
-            <div className="flex flex-col">
-            <h2 className='font-bold uppercase text-[16px] lg:text-2xl tracking-wide'>Diana Boateng, PA</h2>
-            <p className='text-gray-500'>Mental Health</p>
-          </div>
-          <div className="py-3">
-          <p>Tele Helath</p>
-          <p>Tse Addo Street, Accra Gh</p>
-          </div>
+              <div className="flex flex-col">
+                <h2 className='font-bold uppercase text-[16px] lg:text-2xl tracking-wide'>Diana Boateng, PA</h2>
+                <p className='text-gray-500'>Mental Health</p>
+              </div>
+              <div className="py-3">
+                <p>Tele Helath</p>
+                <p>Tse Addo Street, Accra Gh</p>
+              </div>
             </div>
             <Image className='h-24 w-24 rounded-full object-cover'
-                        src="/Doctorpa.jpg" 
-                        width={243} alt='DoctorImg'
-                         height={207} />
+              src="/Doctorpa.jpg"
+              width={243} alt='DoctorImg'
+              height={207} />
           </div>
         </div>
         <div className="py-1">
-        <DoctorsDetails/>
+          <DoctorsDetails />
         </div>
       </div>
+      <FixedBookedButton/>
     </div>
   )
 }

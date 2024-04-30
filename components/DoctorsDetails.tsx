@@ -8,16 +8,20 @@ export default function DoctorsDetails() {
     return (
         <div className=''>
             <div className='flex justify-between items-center '>
-                <button onClick={()=> setIsActive("details")}
-                 className='px-4 bg-blue py-4 w-full font-medium uppercase tracking-wider text-white '>Service Details</button>
-                <button onClick={()=> setIsActive("availability")} className='bg-slate-100 border font-medium uppercase tracking-wider border-gray-200 w-full py-4 px-4 text-slate-800'>Availability</button>
+                <button onClick={() => setIsActive("details")}
+                    className={isActive=== "details"? "py-4 px-8 w-full bg-blue text-white": " border border-gray-200 bg-slate-100 py-4 px-8 w-full text-slate-800"}>Service Details</button>
+                <button 
+                onClick={() => setIsActive("availability")}
+                className={isActive=== "availability"? "py-4 px-8 w-full bg-blue text-white": " border border-gray-200 bg-slate-100 py-4 px-8 w-full text-slate-800"}
+                >Availability</button>
             </div>
+
             <div className="py-10 px-6">
-                {isActive === "availability"? (
-            <div>Availability Details Component</div>
-                ): (
+                {isActive === "availability" ? (
+                    <div>Availability Details Component</div>
+                ) : (
                     <div>Service Details component</div>
-                ) }
+                )}
             </div>
         </div>
 

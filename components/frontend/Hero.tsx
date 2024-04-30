@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
+      <div className=" mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
@@ -34,7 +34,7 @@ const Hero = () => {
                 <ul className="flex flex-col lg:flex-row mt-[30px] gap-5 items-center">
                   <li>
                     <a
-                      href="/#"
+                      href="/dashboard"
                       className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium bg-blue hover:bg-opacity-95"
                     >
                       Get started

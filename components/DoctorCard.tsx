@@ -79,11 +79,11 @@ const  timeStamps = [
                 </h3>
                 <div className="py-3 grid grid-cols-3 gap-[16px]">
                         {timeStamps.slice(0,5).map((item,i) => {
-                            return <Link key={i} className='bg-blue hover:bg-royalBlue text-white py-2 px-3 text-center' href="#">
+                            return <Link key={i} className='bg-blue hover:bg-royalBlue text-white py-[5px] px-[4px] text-center' href="/doctors/slug">
                             {item.time} {item.period}
                             </Link>
                         })}
-                         <Link href="/doctors/slug" className='px-1 py-1 text-center text-black'>
+                         <Link href="/doctors/slug" className='px-[4px] py-[4px] text-center text-black'>
                             More times
                             </Link>
                     </div>
