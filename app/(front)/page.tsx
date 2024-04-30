@@ -9,8 +9,8 @@ export default function Home() {
   return (
    <section>
     <Hero/>
-    <Brands/>
     <DoctorsList/>
+    <Brands/>
 
     {/* <TabSection/> */}
     {/* <ServicesList/> */}
