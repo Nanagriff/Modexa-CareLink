@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className=" mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
+      <div className="relative mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
@@ -128,7 +128,7 @@ const Hero = () => {
             <div className="hidden px-4 lg:block lg:w-1/12"></div>
             <div className="w-full px-4 lg:w-5/12">
               <div className="lg:ml-auto lg:text-right">
-                <div className="relative z-10 inline-block  pt-[5px] lg:pt-0">
+                <div className=" z-10 inline-block  pt-[5px] lg:pt-0">
                   {/* <img
                     src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
                     alt="hero"
