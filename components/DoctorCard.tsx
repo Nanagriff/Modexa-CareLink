@@ -1,4 +1,3 @@
-// import { timeStamp } from 'console'
 import { Stethoscope, Video } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -42,8 +41,7 @@ const  timeStamps = [
     return (
         <div
             className='border  bg-white inline-flex flex-col py-4 px-4 rounded-md
-            hover:border-gray-400 duration-300 transition-all
-     '>
+            hover:border-gray-400 duration-300 transition-all'>
             <Link href="/doctors/slug">
                 <h2 className='font-bold uppercase text-[16px] lg:text-2xl tracking-wide'>Diana Boateng, PA</h2>
                 <p className='py-3'>Tse Addo Street, Accra Gh</p>
@@ -58,7 +56,6 @@ const  timeStamps = [
                          <Video className='w-6 h-6 '/>
                          </p>
                   </div>
-
                     <div className="flex flex-col gap-2">
                         <p className='flex items-center'>
                             <Stethoscope className='w-4 h-4 mr-2 flex-shrink-0' />
@@ -70,8 +67,6 @@ const  timeStamps = [
                     </div>
                 </div>
             </Link>
-
-
             <div className="mt-6 border-t border-gray-400">
                 <h3 className='flex items-center justify-between gap-4'>
                     <span className='text-gray-600'>Tue, April 29th</span>

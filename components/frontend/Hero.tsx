@@ -8,6 +8,7 @@ import Image from "next/image";
 import SearchBar from "./SearchBar";
 // import TransitionText from "./TransitionText";
 import TextAnimation from "./TextAnimation";
+import Link from "next/link";
 
 
 const Hero = () => {
@@ -33,12 +34,12 @@ const Hero = () => {
                 {/* CTA BUTTONS */}
                 <ul className="flex flex-col lg:flex-row mt-[30px] gap-5 items-center">
                   <li>
-                    <a
-                      href="/dashboard"
+                    <Link
+                      href="/signIn"
                       className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium bg-blue hover:bg-opacity-95"
                     >
                       Get started
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a

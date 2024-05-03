@@ -76,25 +76,10 @@
     }
   }
 
-  
-  /* Animation for brands logo */
+ /* .linear-bg{
+  background-image:  url("/public//login.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-.sliding{
-  animation: slide 40s backwards  infinite;
-
-}
-
-.sliding:hover{
-  animation-play-state: running;
-}
-
-@keyframes slide {
-  0%{
-    transform: translateX(0);
-  }
-  100% {
-    transform: translate(90%);
-  }
-
-}
-
+ } */
