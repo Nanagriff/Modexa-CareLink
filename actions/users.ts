@@ -98,23 +98,23 @@ export  async function getUserByID(id: string){
 
 }
 
-export async function updateUserById(id:string){
-  if(id) {
-    try {
-      const updatedUser = await PrismaClient.user.update({
-        where: {
-          id,
-        },
-        data: {
-          isVerified: true,
-        }
-      });
-      return updatedUser
-    } catch (error) {
-      console.log(error)
-    }
-  }
-}
+// export async function updateUserById(id:string){
+//   if(id) {
+//     try {
+//       const updatedUser = await PrismaClient.user.update({
+//         where: {
+//           id,
+//         },
+//         data: {
+//           isVerified: true,
+//         }
+//       });
+//       return updatedUser
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
+// }
 
 
 
