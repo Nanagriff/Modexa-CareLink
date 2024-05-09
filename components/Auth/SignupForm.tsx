@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form"
 import SubmitButton from "../formInputs/SubmitButton";
 import { useState } from "react";
-import { createUser } from "@/actions/users";
+// import { createUser } from "@/actions/users";
 import { UserRole } from "@prisma/client";
 import toast from "react-hot-toast";
 
@@ -26,25 +26,25 @@ export default function SignupForm({role="USER"}: {role?: UserRole}) {
     // console.log(data)
     setIsLoading(true)
     data.role = role;
-    try {
-      const user = await createUser(data)
-      if(user && user.status === 201){
-        console.log("User Created Successfully")
-        reset()
-        setIsLoading(false)
-        toast.success("User was Created Successfully")
-        console.log(user.data)
-      } else {
-        console.log(user.error)
-      }
+  //   try {
+  //     const user = await createUser(data)
+  //     if(user && user.status === 201){
+  //       console.log("User Created Successfully")
+  //       reset()
+  //       setIsLoading(false)
+  //       toast.success("User was Created Successfully")
+  //       console.log(user.data)
+  //     } else {
+  //       console.log(user.error)
+  //     }
       
-      console.log(user);
+  //     console.log(user);
       
-    } catch (error) {
-      console.log(error);
+  //   } catch (error) {
+  //     console.log(error);
       
-    }
-  }
+  //   }
+  // }
 
 
 
