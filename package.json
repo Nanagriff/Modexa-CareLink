@@ -44,6 +44,7 @@
     "react-text-transition": "^3.1.0",
     "react-type-animation": "^3.2.0",
     "resend": "3.2.0",
+    "sharp": "^0.33.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
