@@ -171,7 +171,7 @@ export default function SignupForm({role="USER"}: {role?: UserRole}) {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Already have an Account?{' '}
-          <Link href="signIn" className="font-semibold leading-6 text-blue hover:text-cyan">
+          <Link href="logIn" className="font-semibold leading-6 text-blue hover:text-cyan">
             Sign In
           </Link>
         </p>

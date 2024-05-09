@@ -45,6 +45,8 @@ enum UserRole {
   SERVICE_PROVIDERS
 }
  
+ 
+
 model User {
   id            String    @id @default(auto()) @map("_id") @db.ObjectId
   firstName     String

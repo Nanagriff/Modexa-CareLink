@@ -38,14 +38,15 @@ export default async function Sidebar() {
                                     className="flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 rounded-lg hover:bg-gray-200 group"
                                 >
                                     <Grid2X2 className="flex-shrink-0 w-5 h-5 mr-4" />
-                                    Categories
+                                    Session
+                                    
                                 </Link>
                                 <Link
                                     href="/dashboard/products"
                                     className="flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 rounded-lg hover:bg-gray-200 group"
                                 >
                                     <Folder className="flex-shrink-0 w-5 h-5 mr-4" />
-                                    Products
+                                    Lab RequestS
                                 </Link>
                             </nav>
                         </div>

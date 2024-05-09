@@ -5,6 +5,7 @@ import { RegisterInputProps } from "@/types/types";
 import EmailTemplate from "@/components/Emails/email-template";
 import bcrypt from "bcrypt";
 import { Resend } from "resend"
+import { PrismaClient } from "@prisma/client";
 
 export async function createUser(formdata: RegisterInputProps) {
 
@@ -27,6 +28,7 @@ export async function createUser(formdata: RegisterInputProps) {
             };
         }
 
+
         // Encrypt the Password =>bcrypt
     const hashedPassword = await bcrypt.hash(password, 10);
     //Generate Token
@@ -35,6 +37,7 @@ export async function createUser(formdata: RegisterInputProps) {
       const max = 999999; // Maximum 6-figure number
       return Math.floor(Math.random() * (max - min + 1)) + min;
     };
+
     const userToken = generateToken();
     const newUser = await prismaClient.user.create({
       data: {
@@ -56,16 +59,15 @@ export async function createUser(formdata: RegisterInputProps) {
      const message =
        "Thank you for registering with Carelink. To complete your registration and verify your email address, please enter the following 6-digit verification code on our website :";
      const sendMail = await resend.emails.send({
-       from: "carelinkmodexa@gmail.com",
+       from: "Medical App <carelinkmodexa@gmail.com>",
        to: email,
        subject: "Verify Your Email Address",
        react: EmailTemplate({ firstName, token, linkText, message }),
      });
+     
      console.log(token);
      console.log(sendMail);
      console.log(newUser);
-
-
         return {
             data: newUser,
             error: null,
@@ -79,6 +81,42 @@ export async function createUser(formdata: RegisterInputProps) {
         }
     }
 }
+
+export  async function getUserByID(id: string){
+
+  try {
+    const user = await prismaClient.user.findUnique({
+      where: {
+        id
+      }
+    })
+    return user 
+
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+
+export async function updateUserById(id:string){
+  if(id) {
+    try {
+      const updatedUser = await PrismaClient.user.update({
+        where: {
+          id,
+        },
+        data: {
+          isVerified: true,
+        }
+      });
+      return updatedUser
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+
 
 
 
