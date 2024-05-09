@@ -97,6 +97,7 @@ export  async function getUserByID(id: string){
   }
 
 }
+// I deleted the updateuser function
 
 // export async function updateUserById(id:string){
 //   if(id) {
