@@ -26,8 +26,7 @@ import {
   InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
-import { updateUserById } from "@/actions/users";
- 
+
 const FormSchema = z.object({
   token: z.string().min(6, {
     message: "Your token must be 6 characters.",
