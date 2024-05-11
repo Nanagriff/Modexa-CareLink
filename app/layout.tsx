@@ -5,7 +5,7 @@ import Providers from "@/components/Providers";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: "500"
+  weight: "400"
 });
 
 
