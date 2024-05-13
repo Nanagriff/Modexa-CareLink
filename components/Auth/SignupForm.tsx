@@ -49,6 +49,55 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                         />
                         {errors.firstName && <span className="text-red-600">{errors.firstName.message}</span>}
                     </div>
+
+{/* Last Name */}
+                    <div>
+                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-900">
+                            Last Name
+                        </label>
+                        <input
+                            {...register("lastName", { required: "last name is required" })}
+                            id="lastName"
+                            name="lastName"
+                            type="text"
+                            autoComplete="name"
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                        {errors.lastName && <span className="text-red-600">{errors.lastName.message}</span>}
+                    </div>
+
+                    {/* Phone number */}
+                    <div>
+                        <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-900">
+                            Phone number
+                        </label>
+                        <input
+                            {...register("phone", { required: "phone number is required" })}
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            autoComplete="phone"
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                        {errors.phone && <span className="text-red-600">{errors.phone.message}</span>}
+                    </div>
+
+                    {/* Password */}
+                    <div>
+                        <label htmlFor="password" className="block text-sm font-medium text-gray-900">
+                            Password
+                        </label>
+                        <input
+                            {...register("password", { required: "Password name is required" })}
+                            id="password"
+                            name="password"
+                            type="text"
+                            autoComplete="password"
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                        {errors.password && <span className="text-red-600">{errors.password.message}</span>}
+                    </div>
+
                     {/* Other fields like Last Name, Email, Phone Number, Password */}
                     {/* Submit Button */}
                     <SubmitButton title="Create Account" loadingTitle="Creating, please wait..." isLoading={isLoading} login={""} />

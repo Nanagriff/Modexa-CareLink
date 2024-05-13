@@ -1,14 +1,31 @@
-// import { Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from 'next/link';
+import { Button } from "@/components/ui/button";
 
+export default function CustomButton({
+  title,
+  className = "",
+  href,
+}: {
+  title: string;
+  className?: string;
+  href?: string;
+}) {
 
-export default function CustomButton({title}: {title:string}) {
+  // If href is provided, wrap the Button with a Link component
+  if (href) {
+    return (
+      <Link href={href} passHref>
+        <Button className={`w-[250px] h-[45px]  font-medium hover:bg-best ${className}`}>
+          {title}
+        </Button>
+      </Link>
+    );
+  }
+
+  // If no href is provided, render the Button normally
   return (
-    <Button className="w-[250px] h-[45px] bg-blue">
-      {/* <Mail className="mr-2 h-4 w-4" />  */}
+    <Button className={`w-[250px] h-[45px] uppercase font-medium hover:bg-best ${className}`}>
       {title}
     </Button>
-  )
+  );
 }
-
-
