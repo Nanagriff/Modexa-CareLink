@@ -63,7 +63,7 @@ export default function Pricing() {
                     </h3>
                     <div className='mt-3 max-w-xl'>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur consequat nunc.
+                           We provide you with the best prices Globally.Join Us now 
                         </p>
                     </div>
                 </div>
