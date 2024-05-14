@@ -1,5 +1,12 @@
-import { HelpCircle } from 'lucide-react';
+import { Check, HelpCircle } from 'lucide-react';
 import React from 'react'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 
 export default function Pricing() {
     const plans = [
@@ -10,47 +17,36 @@ export default function Pricing() {
             fee: 5,
             isMostPop: false,
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
-
+            "Manage up to 50 appointments per month",
+            "Basic patient record management",
+            "Email notification for appointments"
             ],
         },
         {
             name: "Startup",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            desc: "I deal for individual practioners starting out",
             price: 35,
             fee: 20,
             isMostPop: true,
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
-            ],
+                "Manage up to 50 appointments per month",
+                "Basic patient record management",
+                "Email notification for appointments"
+                ],
+           
         },
         {
             name: "Enterprise",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            desc: "I deal for individual practioners starting out",
             price: 60,
             fee: 0,
             isMostPop: false,
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
-            ],
+                "Manage up to 50 appointments per month",
+                "Basic patient record management",
+                "Email notification for appointments"
+                ],
+            
         },
     ];
 
@@ -63,7 +59,7 @@ export default function Pricing() {
                     </h3>
                     <div className='mt-3 max-w-xl'>
                         <p>
-                           We provide you with the best prices Globally.Join Us now 
+                            We provide you with the best prices Globally.Join Us now
                         </p>
                     </div>
                 </div>
@@ -77,42 +73,43 @@ export default function Pricing() {
                                     ) : ""
                                 }
                                 <div className="p-8 space-y-4 border-b">
-                                    <span className='text-indigo-600 font-medium'>
+                                    <span className='text-indigo-600 font-semibold uppercase tracking-widest'>
                                         {item.name}
                                     </span>
                                     <div className='text-gray-800 text-3xl font-semibold'>
-                                    <span>&#8373;</span> {item.price} <span className="text-xl text-gray-600 font-normal">/mo</span>
+                                        <span>&#8373;</span> {item.price} <span className="text-xl text-gray-600 font-normal">/mo</span>
                                     </div>
                                     <p className='text-[12px]'>
                                         {item.desc}
                                     </p>
-                                   <div className="flex">
-                                    <p className='text-sm'>+5% transaction fee</p>
-                                    <button>
-                                        <HelpCircle className='w-4 h-4 ms-2'/>
-                                    </button>
-                                   </div>
+                                    <div className="flex">
+                                        <p className='text-sm'>+5% transaction fee</p>
+                                        <TooltipProvider>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <button>
+                                                        <HelpCircle className='w-4 h-4 ms-2' />
+                                                    </button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className='bg-cyan text-white'>
+                                                    <p>Regular transaction charges will be applied</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </div>
                                     <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700'>
                                         Get Started
                                     </button>
                                 </div>
                                 <ul className='p-8 space-y-3'>
                                     <li className="pb-2 text-gray-800 font-medium">
-                                        <p>Features</p>
+                                        <p className='font-semibold'>Features</p>
                                     </li>
                                     {
                                         item.features.map((featureItem, idx) => (
                                             <li key={idx} className='flex items-center gap-5'>
-                                                <svg
-                                                    xmlns='http://www.w3.org/2000/svg'
-                                                    className='h-5 w-5 text-indigo-600'
-                                                    viewBox='0 0 20 20'
-                                                    fill='currentColor'>
-                                                    <path
-                                                        fill-rule='evenodd'
-                                                        d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                                                        clip-rule='evenodd'></path>
-                                                </svg>
+                                                <Check className='h-5 w-5 text-indigo-600'/>
+                                                
                                                 {featureItem}
                                             </li>
                                         ))

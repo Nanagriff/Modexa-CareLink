@@ -113,36 +113,27 @@ export default function page() {
                 </div>
             </section>
 
+            <div className="my-4">
+            <h2 className='sm:text-[2.5rem] text-[1.5rem] leading-[3rem] text-center  font-medium'>
+                            Join Carelink to increase your
+                            <span className='text-blue font-semibold mx-2'>Revenue today</span></h2>
+            </div>
+
             {/* Second Hero Section with Start new applications */}
-            <section className='lg:py-10 sm:py-6 md:py-8 px-5' >
+            <section className='lg:py-10 my-[-20px] sm:py-6 md:py-8 px-5' >
                 <div className='max-w-6xl mx-auto gap-8 grid grid-cols-1 md:grid-cols-2'>
-                    <Image alt='DoctorImage' height={848}
+                    <Image alt='DoctorImage' height={950}
                         width={1170} src="/doctors.jpg"
-                        className='w-full hidden md:block mr-'
+                        className='w-full hidden md:block'
 
                     />
 
                     {/* Join carelink */}
                     <div className="">
-                        <h2 className='sm:text-[2.5rem] text-[1.5rem] leading-[3rem] text-left font-medium'>
-                            Join Carelink to increase your
-                            <span className='text-blue font-semibold mx-2'>Revenue today</span></h2>
+                       
 
-                        <div className="py-6">
-                            {
-                                steps.map((step, i) => {
-                                    return (
-                                        <p key={i} className='flex font-medium pt-3 items-center text-blue'>
-                                            <Check className='w-6 h-6 mr-2 flex-shrink-0 text-cyan font-bold ' />
-                                            {step}
-                                        </p>
-                                    )
-                                })
-                            }
-                        </div>
-
-                        {/* Application Cards */}
-                        <div className="grid lg:grid-cols-2 gap-4 sm:grid-cols-1 xl:grid-cols-2 md:grid-cols-1">
+                      
+                        <div className="grid lg:grid-cols-2 gap-4 py-6 sm:grid-cols-1 xl:grid-cols-2 md:grid-cols-1">
                             {
                                 cards.map((card, i) => {
                                     return (
