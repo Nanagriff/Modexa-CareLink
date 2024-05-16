@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link"
 import {
     Bell,
+    Folder,
+    Grid2X2,
     Home,
     LineChart,
     Package,
@@ -64,20 +66,15 @@ const pathname = usePathname()
             icon: Home
         },
         {
-            name: "Products",
-            path: "/dashboard/products",
-            icon: Package
+            name: "Patients",
+            path: "/dashboard/patients",
+            icon: Folder
         },
         {
-            name: "Order",
-            path: "/dashboard/orders",
-            icon: ShoppingCart,
+            name: "Appointments",
+            path: "/dashboard/appointments",
+            icon: Grid2X2,
             badgeCount: 6
-        },
-        {
-            name: "Customers",
-            path: "/dashboard/customers",
-            icon: Users
         },
         {
             name: "Analytics",

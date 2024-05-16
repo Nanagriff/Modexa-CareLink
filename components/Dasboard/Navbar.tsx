@@ -23,6 +23,7 @@ import {
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import ModeToggle from "../ModeToggle"
 
 
 
@@ -106,6 +107,7 @@ export default function Navbar() {
           </div>
         </form>
       </div>
+      <ModeToggle/>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" size="icon" className="rounded-full">

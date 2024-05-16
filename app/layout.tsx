@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
+import { ThemeProvider } from "@/components/theme-provider"
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,11 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Providers>
           {children}
         </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

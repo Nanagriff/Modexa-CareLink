@@ -43,7 +43,7 @@ import {
 
 
 
-export default function Products() {
+export default function Patients() {
   return (
     <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
     <Tabs defaultValue="all">
@@ -130,7 +130,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
@@ -175,7 +175,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
@@ -220,7 +220,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
@@ -265,7 +265,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
@@ -310,7 +310,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
@@ -355,7 +355,7 @@ export default function Products() {
                       alt="Product image"
                       className="aspect-square rounded-md object-cover"
                       height="64"
-                      src="/placeholder.svg"
+                      src="/smile.jpg"
                       width="64"
                     />
                   </TableCell>
