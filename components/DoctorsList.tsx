@@ -40,8 +40,8 @@ export default function DoctorsList({ title = "TeleHealth" }: { title?: string }
   ]
 
   return (
-    <div className='bg-slate-100 py-8 lg:p-10' >
-      <div className="max-w-6xl mx-[25px] lg:mx-auto">
+    <div className='bg-slate-100 dark:bg-slate-950 py-8 lg:p-10' >
+      <div className="max-w-6xl mx-[25px] dark:bg-slate-950 lg:mx-auto">
         <SectionHeading title={title} />
         <div className="py-4 flex items-center justify-between">
           <ToggleButton />

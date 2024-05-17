@@ -14,6 +14,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 // import Image from 'next/image'
 import Link from "next/link"
+import ModeToggle from "../ModeToggle"
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -35,7 +36,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-blue  lg:fixed  z-20 top-0 w-full">
+    <header className="bg-blue dark:bg-slate-950 lg:fixed z-20 top-0 w-full">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
@@ -45,6 +46,8 @@ export default function Navbar() {
             {/* <Image alt="logo" height={40} width={40} src={logo}/> */}
           </a>
         </div>
+       
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -74,6 +77,7 @@ export default function Navbar() {
                
               </Popover.Panel>
             </Transition>
+            
           </Popover>
 
           <a href="#" className="text-sm font-normal hover:font-semibold leading-6 text-white">
@@ -86,12 +90,16 @@ export default function Navbar() {
             About Us
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex gap-2 lg:flex-1 lg:justify-end">
           <Link href="/logIn" className="text-[12px] bg-white font-semibold leading-6 py-2 px-5 rounded-lg text-black">
             Log In <span aria-hidden="true">&rarr;</span>
           </Link>
+          <ModeToggle/>
           
         </div>
+       
+        
+
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />

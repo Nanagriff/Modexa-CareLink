@@ -1,12 +1,10 @@
 "use client"
 
-import React, { useState } from "react";
 import doctorImg from "../../assets/images/doctors.jpg"
 import Image from "next/image";
-// import {google} from "../../assets"
-// import { companyLogos } from "@/constants";
+
 import SearchBar from "./SearchBar";
-// import TransitionText from "./TransitionText";
+
 import TextAnimation from "./TextAnimation";
 import Link from "next/link";
 
@@ -15,16 +13,15 @@ const Hero = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative mx-[10px] max-w-6xl bg-white pt-[70px] dark:bg-dark lg:pt-[100px]">
-        <div className="container">
+      <div className="relative mx-[-20px] w-full dark:bg-slate-950 bg-white pt-[70px] lg:pt-[100px]">
+        <div className="container dark:bg-slate-950 ">
           <div className="-mx-4 flex flex-col-reverse lg:flex-row">
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
               <div className="hero-content lg:mt-[-70px]">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208]  text-[22px] lg:text-[40px] xl:text-5xl">
-                  Instant Medical Healthcare, <span className="text-blue text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation /></span>
-
+                  Instant Medical Healthcare, <span className="text-blue dark:text-cyan text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation /></span>
                 </h1>
-                <p className="mb-8 mt-5 max-w-[480px] opacity-60 text-base text-justify">
+                <p className="mb-8 mt-5 max-w-[480px] dark:lg:text-[14px] font-extralight dark:lg:text-slate-50 dark:opacity-40 opacity-60  text-justify">
                   Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
                 </p>
 
@@ -36,7 +33,7 @@ const Hero = () => {
                   <li>
                     <Link
                       href="/signIn"
-                      className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium bg-blue hover:bg-opacity-95"
+                      className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium dark:bg-cyan bg-blue hover:bg-opacity-95"
                     >
                       Get started
                     </Link>
@@ -44,7 +41,7 @@ const Hero = () => {
                   <li>
                     <a
                       href="/#"
-                      className="inline-flex items-center px-[80px] py-[16px]  rounded-lg lg:px-[24px] lg:py-2 justify-center text-center border-[2px] text-[14px] border-blue font-medium text-blue "
+                      className="inline-flex dark:bg-white items-center px-[80px] py-[16px]  rounded-lg lg:px-[24px] lg:py-2 justify-center text-center border-[2px] text-[14px] border-blue font-medium text-blue "
                     >
                       <span className="mr-2">
                         <svg
@@ -83,46 +80,15 @@ const Hero = () => {
                 {/* STATISTICS TAB ON THE MOBILE PAGE */}
                 <div className="py-4 flex lg:hidden justify-center mt-5 gap-4">
                   <div className="flex-col flex">
-                    <span className="font-bold text-center text-[18px] text-blue">1000 </span>
-                    <span className="text-sm text-gray-500">Active Users</span>
+                    <span className="font-bold text-center text-[18px] dark:text-cyan text-blue">1000 </span>
+                    <span className="text-sm text-gray-500 dark:text-white ">Active Users</span>
                   </div>
                   <div className="flex-col flex">
-                    <span className="font-bold text-center text-[18px]  text-blue">600 </span>
-                    <span className="text-sm text-gray-500">Active Specialist</span>
+                    <span className="font-bold text-center text-[18px] dark:text-cyan text-blue">600 </span>
+                    <span className="text-sm text-gray-500 dark:text-white">Active Specialist</span>
                   </div>
                 </div>
                 <div className="clients text-center pt-14">
-                  {/* <h6 className=" lg:text-left text-center text-[22px] lg:[32px] font-bold ">
-                    Our Partners
-                  </h6> */}
-
-                  {/* <ul className="flex sliding">
-        {companyLogos.map((logo, index) => (
-          <li
-            className="flex items-center justify-center flex-1 h-[8.5rem]"
-            key={index}
-          >
-            <Image src={logo} width={134} height={28} alt={logo} />
-          </li>
-        ))}
-      </ul> */}
-
-                  {/* <div className="flex items-center space-x-4">
-                    <SingleImage
-                      href="#"
-                      imgSrc="../../assets//google.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/graygrids.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg"
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -130,11 +96,6 @@ const Hero = () => {
             <div className="w-full px-4 lg:w-5/12">
               <div className="lg:ml-auto lg:text-right">
                 <div className=" z-10 inline-block  pt-[5px] lg:pt-0">
-                  {/* <img
-                    src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
-                    alt="hero"
-                    className="max-w-full lg:ml-auto"
-                  /> */}
                   <Image src={doctorImg} className="max-w-full lg:ml-auto  " alt="Doctor img" />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
@@ -176,7 +137,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
     </>
   );
@@ -184,15 +145,7 @@ const Hero = () => {
 
 export default Hero;
 
-// const SingleImage = ({ href, imgSrc }: {href:string, imgSrc:string}) => {
-//   return (
-//     <>
-//       <a href={href} className="flex w-full items-center justify-center">
-//         <img src={imgSrc} alt="brand image" className="h-10 w-full" />
-//       </a>
-//     </>
-//   );
-// };
+
 
 
 

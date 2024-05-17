@@ -4,9 +4,9 @@ import React, { ReactNode } from 'react'
 
 export default function Layout({children}:{children:ReactNode}) {
   return (
-    <div className='bg-white'>
+    <div className='bg-white w-full dark:bg-slate-950'>
       <Navbar/>
-      <div className="lg:mt-[90px] mt-[20px] mx-[20px] lg:mx-[30px]">
+      <div className="lg:mt-[50px] mt-[20px] mx-[20px] lg:mx-[30px]">
       {children}
       <Footer/>
       </div>

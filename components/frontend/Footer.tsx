@@ -79,11 +79,10 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="text-gray-500 mt-[100px] bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+        <footer className="text-gray-500 mt-[100px] dark:bg-slate-950 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
             <div className="gap-6 justify-between md:flex">
                 <div className="flex-1">
                     <div className="max-w-xs">
-                        {/* <img src="https://www.floatui.com/logo.svg" className="w-32" /> */}
                         <Image alt='logo' width={30} height={30} src="/logo.jpg"/>
                         <p className="leading-relaxed mt-2 text-[15px]">
                         Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers
