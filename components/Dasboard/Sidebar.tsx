@@ -91,7 +91,7 @@ const pathname = usePathname()
     ]
 
     return (
-        <div className="hidden border-r bg-muted/40 md:block">
+        <div className="hidden border-r bg-muted/40 md:block dark:bg-slate-950">
             <div className="flex h-full max-h-screen flex-col gap-2">
                 <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
                     <Link href="/" className="flex items-center gap-2 font-normal">
@@ -112,11 +112,11 @@ const pathname = usePathname()
                                 <Link
                                     key={i}
                                     href={item.path}
-                                    className={cn("flex hover:bg-gray-200 items-center font-normal text-black gap-3 rounded-lg px-3 py-2 transition-all hover:font-semibold",
-                                    pathname === item.path ? "bg-muted text-primary bg-gray-300": ""
+                                    className={cn("flex hover:bg-gray-200 dark:hover:bg-gray-900 items-center font-normal dark:text-slate-200 text-black gap-3 rounded-lg px-3 py-2 transition-all hover:font-semibold",
+                                    pathname === item.path ? "bg-muted text-primary dark:bg-slate-900 bg-gray-300": ""
                                     )}
                                 >
-                                    <Icon className="h-4 w-4 text-blue" />
+                                    <Icon className="h-4 w-4 dark:text-slate-400 text-blue" />
                                     {item.name}
                                     {item.badgeCount &&   <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                                         {item.badgeCount}

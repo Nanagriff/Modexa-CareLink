@@ -54,11 +54,11 @@ export default function Pricing() {
         <section className='py-14'>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className='relative max-w-xl mx-auto sm:text-center'>
-                    <h3 className='text-gray-800 text-3xl font-semibold sm:text-4xl'>
+                    <h3 className='text-gray-800 dark:text-slate-200 text-3xl font-semibold sm:text-4xl'>
                         Pricing for all service Providers
                     </h3>
                     <div className='mt-3 max-w-xl'>
-                        <p>
+                        <p className='dark:text-slate-300'>
                             We provide you with the best prices Globally.Join Us now
                         </p>
                     </div>
@@ -66,24 +66,24 @@ export default function Pricing() {
                 <div className='mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3'>
                     {
                         plans.map((item, idx) => (
-                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl hover:border-blue hover:animate-out border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""}`}>
+                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl dark:hover:border-slate-200 hover:border-blue hover:animate-out border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""}`}>
                                 {
                                     item.isMostPop ? (
                                         <span className="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border shadow-md bg-white text-center text-gray-700 text-sm font-semibold">Most popular</span>
                                     ) : ""
                                 }
                                 <div className="p-8 space-y-4 border-b">
-                                    <span className='text-indigo-600 font-semibold uppercase tracking-widest'>
+                                    <span className='text-indigo-600 dark:text-slate-200 font-semibold uppercase tracking-widest'>
                                         {item.name}
                                     </span>
-                                    <div className='text-gray-800 text-3xl font-semibold'>
-                                        <span>&#8373;</span> {item.price} <span className="text-xl text-gray-600 font-normal">/mo</span>
+                                    <div className='text-gray-800 dark:text-slate-300 text-3xl font-semibold'>
+                                        <span>&#8373;</span> {item.price} <span className="text-xl dark:text-slate-300 text-gray-600 font-normal">/mo</span>
                                     </div>
-                                    <p className='text-[12px]'>
+                                    <p className='text-[12px] dark:text-slate-400'>
                                         {item.desc}
                                     </p>
                                     <div className="flex">
-                                        <p className='text-sm'>+5% transaction fee</p>
+                                        <p className='text-sm dark:text-slate-200'>+5% transaction fee</p>
                                         <TooltipProvider>
                                             <Tooltip>
                                                 <TooltipTrigger asChild>
@@ -97,20 +97,22 @@ export default function Pricing() {
                                             </Tooltip>
                                         </TooltipProvider>
                                     </div>
-                                    <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700'>
+                                    <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 dark:bg-slate-950 dark:border-2 dark:border-slate-60 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700'>
                                         Get Started
                                     </button>
                                 </div>
                                 <ul className='p-8 space-y-3'>
                                     <li className="pb-2 text-gray-800 font-medium">
-                                        <p className='font-semibold'>Features</p>
+                                        <p className='font-semibold dark:text-slate-300'>Features</p>
                                     </li>
                                     {
                                         item.features.map((featureItem, idx) => (
                                             <li key={idx} className='flex items-center gap-5'>
-                                                <Check className='h-5 w-5 text-indigo-600'/>
-                                                
+                                                <Check className='h-5 w-5 dark:text-slate-200 text-indigo-600'/>
+                                                <p className='dark:text-slate-500'>
                                                 {featureItem}
+                                                </p>
+                                             
                                             </li>
                                         ))
                                     }

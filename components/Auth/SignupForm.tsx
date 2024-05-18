@@ -26,7 +26,7 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
         <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <Image src="/logo.jpg" width={34} height={34} className="mx-auto h-10 w-auto" alt="logo" />
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-white text-gray-900">
                     Create New Account
                 </h2>
             </div>
@@ -36,7 +36,7 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                     {/* Input fields and other form elements here */}
                     {/* First Name */}
                     <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-900">
+                        <label htmlFor="firstName" className="block text-sm font-medium dark:text-white text-gray-900">
                             First Name
                         </label>
                         <input
@@ -45,14 +45,14 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                             name="firstName"
                             type="text"
                             autoComplete="name"
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="mt-1 block w-full rounded-md dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                         {errors.firstName && <span className="text-red-600">{errors.firstName.message}</span>}
                     </div>
 
 {/* Last Name */}
                     <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-900">
+                        <label htmlFor="firstName" className="block text-sm font-medium dark:text-white text-gray-900">
                             Last Name
                         </label>
                         <input
@@ -61,14 +61,14 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                             name="lastName"
                             type="text"
                             autoComplete="name"
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="mt-1 block w-full rounded-md  dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                         {errors.lastName && <span className="text-red-600">{errors.lastName.message}</span>}
                     </div>
 
                     {/* Phone number */}
                     <div>
-                        <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-900">
+                        <label htmlFor="phoneNumber" className="block text-sm font-medium dark:text-white text-gray-900">
                             Phone number
                         </label>
                         <input
@@ -77,14 +77,14 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                             name="phone"
                             type="tel"
                             autoComplete="phone"
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="mt-1 block w-full rounded-md  dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                         {errors.phone && <span className="text-red-600">{errors.phone.message}</span>}
                     </div>
 
                     {/* Password */}
                     <div>
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-900">
+                        <label htmlFor="password" className="block text-sm font-medium dark:text-white text-gray-900">
                             Password
                         </label>
                         <input
@@ -93,7 +93,7 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                             name="password"
                             type="text"
                             autoComplete="password"
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="mt-1 block w-full rounded-md  dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                         {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     </div>

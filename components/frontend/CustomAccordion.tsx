@@ -23,7 +23,7 @@ import {
                 return (
                     <AccordionItem  key={i} value={faq.qn}>
                     <AccordionTrigger className="font-medium">{faq.qn}</AccordionTrigger>
-                    <AccordionContent className="text-cyan">
+                    <AccordionContent className="text-cyan dark:text-slate-100">
                     {faq.ans}
                     </AccordionContent>
                   </AccordionItem>

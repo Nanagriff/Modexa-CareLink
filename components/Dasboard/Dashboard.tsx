@@ -40,7 +40,7 @@ export function Dashboard() {
                         <CardTitle className="text-sm font-medium">
                             Total Revenue
                         </CardTitle>
-                        <DollarSign className="h-4 w-4 text-muted-foreground" />
+                        <DollarSign className="h-4 w-4 text-cyan text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl font-bold">$45,231.89</div>
@@ -66,7 +66,7 @@ export function Dashboard() {
                 <Card x-chunk="dashboard-01-chunk-2">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                         <CardTitle className="text-sm font-medium">Sales</CardTitle>
-                        <CreditCard className="h-4 w-4 text-muted-foreground" />
+                        <CreditCard className="h-4 w-4 text-blue text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl font-bold">+12,234</div>
@@ -99,7 +99,7 @@ export function Dashboard() {
                                 Recent transactions from your store.
                             </CardDescription>
                         </div>
-                        <Button asChild size="sm" className="ml-auto bg-blue hover:bg-blue gap-1">
+                        <Button asChild size="sm" className="ml-auto bg-blue dark:bg-slate-200 hover:bg-blue gap-1">
                             <Link href="#">
                                 View All
                                 <ArrowUpRight className="h-4 w-4" />

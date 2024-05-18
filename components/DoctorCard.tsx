@@ -61,7 +61,7 @@ export default function DoctorCard() {
                             <Stethoscope className='w-4 h-4 mr-2 flex-shrink-0' />
                             <span>Mental Health</span>
                         </p>
-                        <p className="bg-green-300 dark:bg-cyan text-[10px] py-2 font-medium hover:bg-green-200 px-2 uppercase">
+                        <p className="bg-green-300 dark:bg-slate-800 text-[10px] py-2 font-medium hover:bg-green-200 px-2 uppercase">
                             Available today
                         </p>
                     </div>

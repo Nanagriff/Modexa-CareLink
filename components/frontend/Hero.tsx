@@ -7,6 +7,7 @@ import SearchBar from "./SearchBar";
 
 import TextAnimation from "./TextAnimation";
 import Link from "next/link";
+import { Download } from "lucide-react";
 
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
             <div className="w-full px-[4px] pt-[50px] lg:w-6/12">
               <div className="hero-content lg:mt-[-70px]">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208]  text-[22px] lg:text-[40px] xl:text-5xl">
-                  Instant Medical Healthcare, <span className="text-blue dark:text-cyan text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation /></span>
+                  Instant Medical Healthcare, <span className="text-blue dark:text-white text-[20px] lg:text-[36px] xl:text-5xl"><TextAnimation /></span>
                 </h1>
                 <p className="mb-8 mt-5 max-w-[480px] dark:lg:text-[14px] font-extralight dark:lg:text-slate-50 dark:opacity-40 opacity-60  text-justify">
                   Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers and medical researchers understand health trends better and make informed decisions.
@@ -33,7 +34,7 @@ const Hero = () => {
                   <li>
                     <Link
                       href="/signIn"
-                      className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium dark:bg-cyan bg-blue hover:bg-opacity-95"
+                      className="inline-flex items-center justify-center  rounded-md  lg:py-[14px] lg:px-[50px] lg:text-[14px] text-[14px] px-[110px] py-[20px] text-center text-white font-medium dark:bg-slate-900 dark:border-2 dark:border-slate-200 bg-blue hover:bg-opacity-95"
                     >
                       Get started
                     </Link>
@@ -41,36 +42,10 @@ const Hero = () => {
                   <li>
                     <a
                       href="/#"
-                      className="inline-flex dark:bg-white items-center px-[80px] py-[16px]  rounded-lg lg:px-[24px] lg:py-2 justify-center text-center border-[2px] text-[14px] border-blue font-medium text-blue "
+                      className="inline-flex dark:bg-white items-center px-[80px] py-[16px]  rounded-lg lg:px-[24px] lg:py-2 justify-center text-center border-[2px] text-[14px] border-blue font-medium dark:text-black text-blue "
                     >
                       <span className="mr-2">
-                        <svg
-                          width="24"
-                          height="25"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle cx="12" cy="12.6152" r="12" fill="#3758F9" />
-                          <rect
-                            x="7.99893"
-                            y="14.979"
-                            width="8.18182"
-                            height="1.63636"
-                            fill="white"
-                          />
-                          <rect
-                            x="11.2717"
-                            y="7.61523"
-                            width="1.63636"
-                            height="4.09091"
-                            fill="white"
-                          />
-                          <path
-                            d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z"
-                            fill="white"
-                          />
-                        </svg>
+                       <Download className="h-4 w-4"/>
                       </span>
                       Download App
                     </a>

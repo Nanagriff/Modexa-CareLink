@@ -84,22 +84,25 @@ export default function page() {
             <section className='lg:py-10 sm:py-6 md:py-8 px-5' >
                 <div className='max-w-6xl mx-auto gap-4 grid grid-cols-1 md:grid-cols-2'>
                     <div className="">
-                        <h2 className='sm:text-[2.5rem] text-[1.5rem] md:leading-[3.5rem] text-left font-medium'>Build a thriving <span className='text-blue font-semibold'>direct-pay</span> {" "} practice with Carelink</h2>
+                        <h2 className='sm:text-[2.5rem] text-[1.5rem] md:leading-[3.5rem] text-left font-medium'>Build a thriving <span className='text-blue font-semibold dark:text-white dark:font-extrabold'>direct-pay</span> {" "} practice with Carelink</h2>
                         <p className='py-8 opacity-70'>Welcome to Carelink, where connecting with patients is made easier than ever before.
                             Our platform streamlines the process of managing appointments, providing care remotely
                             and keeping track of patient records.</p>
 
                         <CustomButton title="List your Service"
-                            className='uppercase font-medium bg-best'
+                            className='uppercase font-medium dark:bg-white dark:text-slate-800  bg-best'
 
                         />
                         <div className="py-6">
                             {
                                 features.map((fetaure, i) => {
                                     return (
-                                        <p key={i} className='flex font-medium pt-3 items-center text-blue'>
-                                            <Check className='w-6 h-6 mr-2 flex-shrink-0 text-cyan font-bold ' />
+                                        <p key={i} className='flex font-medium pt-3 items-center dark:text-slate-200 text-blue'>
+                                            <Check className='w-6 h-6 mr-2 flex-shrink-0 dark:text-slate-200 font-bold ' />
+                                        
                                             {fetaure}
+
+                                            
                                         </p>
                                     )
                                 })
@@ -116,7 +119,7 @@ export default function page() {
             <div className="my-4">
             <h2 className='sm:text-[2.5rem] text-[1.5rem] leading-[3rem] text-center  font-medium'>
                             Join Carelink to increase your
-                            <span className='text-blue font-semibold mx-2'>Revenue today</span></h2>
+                            <span className='text-blue dark:text-white dark:font-extrabold font-semibold mx-2'>Revenue today</span></h2>
             </div>
 
             {/* Second Hero Section with Start new applications */}
@@ -137,7 +140,7 @@ export default function page() {
                             {
                                 cards.map((card, i) => {
                                     return (
-                                        <div key={i} className="bg-blue p-4 rounded-lg shadow-2xl text-center">
+                                        <div key={i} className="bg-blue dark:bg-slate-900 p-4 rounded-lg shadow-2xl text-center">
                                             <h3 className='text-[18px] font-semibold text-white'>
                                                 {card.title}
                                             </h3>
@@ -145,7 +148,7 @@ export default function page() {
                                                 {card.description}
                                             </p>
                                             <CustomButton title={card.linkTitle}
-                                                className="text-white sm:w-[170px] md:w-[190px]  bg-cyan" href={card.link} />
+                                                className="text-white sm:w-[170px] md:w-[190px] dark:bg-slate-800 bg-cyan" href={card.link} />
                                         </div>
                                     )
                                 })
@@ -164,8 +167,11 @@ export default function page() {
 
             <section className='lg:py-10 my-12 sm:py-6 md:py-8 px-5' >
                 <div className='max-w-4xl mx-auto gap-8'>
-                    <h2 className='sm:2xl font-semibold text-blue lg:text-3xl'>Frequently Asked Questions - Doctors Onboarding</h2>
-                    <CustomAccordion FAQS={faqs} />
+                    <h2 className='sm:2xl font-semibold dark:text-white dark:font-extrabold text-blue  lg:text-3xl'>Frequently Asked Questions - Doctors Onboarding</h2>
+                   <div className='py-5 dark:text-slate-400'>
+                   <CustomAccordion  FAQS={faqs} />
+                   </div>
+                 
                 </div>
             </section>
 
