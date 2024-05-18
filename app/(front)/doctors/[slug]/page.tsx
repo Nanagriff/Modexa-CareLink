@@ -7,8 +7,8 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='bg-slate-50  min-h-screen'>
-      <div className="max-w-4xl bg-white border
+    <div className='bg-slate-50  dark:bg-slate-950 min-h-screen'>
+      <div className="max-w-4xl bg-white dark:bg-slate-950 border
        border-gray-200 shadow-md rounded-md mx-auto">
         <div className="py-10 px-8">
           <div className="flex items-center justify-between">

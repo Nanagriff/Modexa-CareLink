@@ -25,6 +25,5 @@ export default function DoctorsDetails() {
                 )}
             </div>
         </div>
-
     )
 }

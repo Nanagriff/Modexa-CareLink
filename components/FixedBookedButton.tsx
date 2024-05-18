@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 export default function FixedBookedButton() {
   return (
     <div className="fixed bottom-0 z-50  w-full shadow-2xl
-     lg:py-4 px-6 py-3 bg-slate-100 border
+     lg:py-4 px-6 py-3 dark:bg-slate-950 bg-slate-100 border
     border-gray-200  rounded-md">
       <div className="max-w-4xl mx-auto gap-4 flex items-center justify-between">
         <div className="w-full">
