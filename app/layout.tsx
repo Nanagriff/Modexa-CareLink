@@ -3,6 +3,13 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import { ThemeProvider } from "@/components/theme-provider"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 
 
@@ -23,8 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>
+      <body className={poppins.className}>       
       <ThemeProvider
             attribute="class"
             defaultTheme="light"
@@ -37,5 +45,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+
   );
 }

@@ -8,9 +8,10 @@ import { useState } from "react";
 import { UserRole } from "@prisma/client";
 import toast from "react-hot-toast";
 
-export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
-    const [isLoading, setIsLoading] = useState(false);
+export default function SignupForm({ role = "SERVICE_PROVIDERS", plan}: { role?: UserRole; plan? : string}) {
 
+    
+    const [isLoading, setIsLoading] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm<RegisterInputProps>();
 
     async function onSubmit(data: RegisterInputProps) {
@@ -80,6 +81,23 @@ export default function SignupForm({ role = "USER" }: { role?: UserRole }) {
                             className="mt-1 block w-full rounded-md  dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                         {errors.phone && <span className="text-red-600">{errors.phone.message}</span>}
+                    </div>
+
+                    {/* EMAIL ADDRESS */}
+
+                    <div>
+                        <label htmlFor="email" className="block text-sm font-medium dark:text-white text-gray-900">
+                            Email
+                        </label>
+                        <input
+                            {...register("email", { required: "phone number is required" })}
+                            id="email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            className="mt-1 block w-full rounded-md  dark:bg-slate-950 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                        {errors.email && <span className="text-red-600">{errors.email.message}</span>}
                     </div>
 
                     {/* Password */}

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 
 export default function page() {
+ 
   return (
     <div className=' min-h-screen '>
       <div className="grid md:grid-cols-2 grid-cols-1 w-full

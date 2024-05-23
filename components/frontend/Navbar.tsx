@@ -1,5 +1,4 @@
 "use client"
-import logo from "../../assets/images/logo.jpg"
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
