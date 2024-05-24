@@ -26,7 +26,7 @@ export default function page() {
         {
             title: "Begin Your Journey",
             description: "Start a new application",
-            link: "#",
+            link: "/onboarding/page",
             linkTitle: "Start a new application"
         },
         {
@@ -90,6 +90,7 @@ export default function page() {
                             and keeping track of patient records.</p>
 
                         <CustomButton title="List your Service"
+                        href='/onboarding/page'
                             className='uppercase font-medium dark:bg-white dark:text-slate-800  bg-best'
 
                         />
