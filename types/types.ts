@@ -17,6 +17,7 @@ export type ServicesProps = {
 
   export type LoginInputProps = {
     email: string,
-    password: string
+    password: string,
+    fullName: string,
   }
 

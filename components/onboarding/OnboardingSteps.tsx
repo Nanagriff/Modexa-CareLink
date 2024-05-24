@@ -61,7 +61,7 @@ export default function OnboardingSteps({ id }: { id: string }) {
 
 
   return (
-    <div className='grid grid-cols-12 mx-auto shadow-inner overflow-hidden min-h-screen dark:bg-white bg-slate-200'>
+    <div className='grid grid-cols-12 mx-auto shadow-inner overflow-hidden min-h-screen dark:bg-white bg-slate-100'>
       <div className="col-span-full sm:col-span-3 divide-y-2 divide-gray-200">
         {steps.map((step, i) => {
           const isActive = step.page === page;
