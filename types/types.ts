@@ -21,3 +21,14 @@ export type ServicesProps = {
     fullName: string,
   }
 
+export type BioDataFormProps = {
+  firstName: string;
+  lastName: string;
+  middleName?: string,
+  dob: string,
+  gender: string;
+  profilePicture?: string;
+  medicalLicense: string;
+  bio: string;
+  medicalLicenseExpiry: string;
+}
