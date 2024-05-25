@@ -3,13 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import { ThemeProvider } from "@/components/theme-provider"
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+
 
 
 
