@@ -13,49 +13,49 @@ import AvailabilityInfo from './AvailabilityInfo';
 
 export default function OnboardingSteps({ id }: { id: string }) {
   const params = useSearchParams();
-  const page = params.get("page") ?? 5; // Ensure default page value is a valid step
-  console.log(page);
+  const page = params.get("page"); // Ensure default page value is a valid step
+  // console.log(page);
 
   const steps = [
     {
       title: "Bio Data",
       page: "bio-data",
-      component: <BioDataForm/>
+      component: <BioDataForm />
     },
     {
       title: "Contact Information",
       page: "contact",
-      component: <ContactInfo/>
+      component: <ContactInfo />
     },
     {
       title: "Professional Information",
       page: "profession",
-      component: <ProfessionalInfo/>
+      component: <ProfessionalInfo />
     },
     {
       title: "Education Information",
       page: "education",
-      component: <EducationalInfo/>
+      component: <EducationalInfo />
     },
     {
       title: "Practice Information",
       page: "practice",
-      component:<PracticeInfo/>
+      component: <PracticeInfo />
     },
     {
       title: "Additional Information",
       page: "additional",
-      component: <AdditionalInfo/>
+      component: <AdditionalInfo />
     },
-   
+
     {
       title: "Availability",
       page: "availability",
-      component: <AvailabilityInfo/>
+      component: <AvailabilityInfo />
     },
   ];
 
-  const currentStep = steps.find((steps)=>steps.page===page)
+  const currentStep = steps.find((steps) => steps.page === page)
   console.log(currentStep)
 
 

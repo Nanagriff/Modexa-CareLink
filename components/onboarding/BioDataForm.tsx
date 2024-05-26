@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { LoginInputProps, RegisterInputProps } from "@/types/types";
 import SubmitButton from "../formInputs/SubmitButton"; // Ensure this import is correct
 import { Alert } from "flowbite-react";
@@ -23,7 +23,7 @@ export default function LoginForm() {
   const [expiry, setExpiry] = useState<Date>()
   // console.log(dob)
   const [showNotification, setShowNotification] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -115,7 +115,7 @@ export default function LoginForm() {
 
            {/* RADIO INPUT  */}
            <div className="col-span-full sm:col-span-1">
-            <RadioGroupInput />
+            <RadioGroupInput/>
           </div>
 
 
@@ -140,4 +140,5 @@ export default function LoginForm() {
     </div>
   );
 }
+
 
