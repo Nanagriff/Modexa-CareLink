@@ -5,7 +5,7 @@ export function TextareaInput() {
   return (
     <div className="grid w-full gap-1.5">
       <Label htmlFor="message">Enter your Bio</Label>
-      <Textarea placeholder="Type your message here." id="message" />
+      <Textarea placeholder="Type your message here."  id="message" />
     </div>
   )
 }

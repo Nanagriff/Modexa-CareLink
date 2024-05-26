@@ -11,6 +11,7 @@ import TextInput from "../formInputs/TextInput";
 import React from "react";
 import { DatePickerInput } from "../formInputs/DatePickerInput";
 import { TextareaInput } from "../formInputs/TextareaInput";
+import { RadioGroupInput } from "../formInputs/RadioGroupInput";
 
 
 
@@ -69,7 +70,7 @@ export default function LoginForm() {
             errors={errors}
             className="col-span-full sm:col-span-1"
           />
-          
+
           {/* Middle Name */}
           <TextInput
             label="Middle Name (optional)"
@@ -82,7 +83,7 @@ export default function LoginForm() {
             className="col-span-full sm:col-span-1"
           />
 
-          {/* Date of birth picture */}
+          {/* Date of birth */}
           <div className="">
             <DatePickerInput
               title="Date of Birth"
@@ -112,11 +113,17 @@ export default function LoginForm() {
             />
           </div>
 
+           {/* RADIO INPUT  */}
+           <div className="col-span-full sm:col-span-1">
+            <RadioGroupInput />
+          </div>
+
+
           {/* TEXT AREA FOR THE BIO */}
           <div className="col-span-full sm:col-span-1">
             <TextareaInput />
           </div>
-
+         
 
         </div>
 
