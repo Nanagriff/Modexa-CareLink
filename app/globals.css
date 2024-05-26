@@ -83,3 +83,36 @@
   background-repeat: no-repeat;
 
  } */
+
+ /* Custom styles for react-datepicker */
+.date-picker .react-datepicker {
+  @apply bg-white rounded-lg shadow-lg border border-gray-300;
+}
+
+.date-picker .react-datepicker__header {
+  @apply bg-blue;
+}
+
+.date-picker .react-datepicker__current-month,
+.date-picker .react-datepicker-time__header,
+.date-picker .react-datepicker-year-header {
+  @apply text-white;
+}
+
+.date-picker .react-datepicker__day-name,
+.date-picker .react-datepicker__day,
+.date-picker .react-datepicker__time-name {
+  @apply hover:bg-blue hover:text-white;
+}
+
+.date-picker .react-datepicker__day--selected {
+  @apply bg-blue text-white;
+}
+
+.date-picker .react-datepicker__day--keyboard-selected {
+  @apply bg-blue text-white;
+}
+
+.date-picker .react-datepicker__input-container input {
+  @apply w-full;
+}

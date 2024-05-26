@@ -1,20 +1,16 @@
 "use client"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-// import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-// import Link from "next/link";
-// import Image from "next/image"; 
-// import { signIn as nextAuthSignIn } from "next-auth/react";
 import { LoginInputProps, RegisterInputProps } from "@/types/types";
 import SubmitButton from "../formInputs/SubmitButton"; // Ensure this import is correct
 import { Alert } from "flowbite-react";
 import { HiInformationCircle } from "react-icons/hi";
-// import { Button } from "../ui/button";
-// import CustomButton from "../CustomButton";
+
 import TextInput from "../formInputs/TextInput";
 import React from "react";
 import { DatePickerInput } from "../formInputs/DatePickerInput";
+import { TextareaInput } from "../formInputs/TextareaInput";
 
 
 
@@ -51,7 +47,7 @@ export default function LoginForm() {
           </Alert>
         )}
         <div className="grid gap-4 grid-cols-2">
-          
+          {/* First Name */}
           <TextInput
             label="First Name"
             name="firstName"
@@ -62,7 +58,7 @@ export default function LoginForm() {
             errors={errors}
             className="col-span-full sm:col-span-1"
           />
-
+          {/* Last Name */}
           <TextInput
             label="Last Name"
             name="lastName"
@@ -73,7 +69,8 @@ export default function LoginForm() {
             errors={errors}
             className="col-span-full sm:col-span-1"
           />
-
+          
+          {/* Middle Name */}
           <TextInput
             label="Middle Name (optional)"
             name="middleName"
@@ -84,18 +81,22 @@ export default function LoginForm() {
             errors={errors}
             className="col-span-full sm:col-span-1"
           />
+
+          {/* Date of birth picture */}
           <div className="">
-            <DatePickerInput 
-            title="Date of Birth" 
-            date={dob} 
-            setDate={setDob} 
+            <DatePickerInput
+              title="Date of Birth"
+              date={dob}
+              setDate={setDob}
             />
           </div>
+
+          {/* Medical license Number */}
 
           <TextInput
             label="Medical License Number"
             name="medicalLicense"
-            placeholder=""
+            placeholder="Enter Medical license..."
             register={register}
             required={true}
             errors={errors}
@@ -104,13 +105,19 @@ export default function LoginForm() {
 
           {/* Medical license expiration */}
           <div className="">
-          <DatePickerInput 
-            title="Medical License Expiration" 
-            date={expiry} 
-            setDate={setExpiry} 
+            <DatePickerInput
+              title="Medical License Expiration"
+              date={expiry}
+              setDate={setExpiry}
             />
           </div>
-         
+
+          {/* TEXT AREA FOR THE BIO */}
+          <div className="col-span-full sm:col-span-1">
+            <TextareaInput />
+          </div>
+
+
         </div>
 
         {/* Submit Button */}
