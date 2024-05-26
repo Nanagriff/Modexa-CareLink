@@ -4,26 +4,25 @@ import { useForm } from "react-hook-form";
 // import { useRouter } from "next/navigation";
 import { LoginInputProps, RegisterInputProps } from "@/types/types";
 import SubmitButton from "../formInputs/SubmitButton"; // Ensure this import is correct
-import { Alert } from "flowbite-react";
-import { HiInformationCircle } from "react-icons/hi";
+
 
 import TextInput from "../formInputs/TextInput";
 import React from "react";
 import { DatePickerInput } from "../formInputs/DatePickerInput";
 import { TextareaInput } from "../formInputs/TextareaInput";
 import { RadioGroupInput } from "../formInputs/RadioGroupInput";
+import ImageInput from "../formInputs/ImageInput";
 
 
 
 
 
-export default function LoginForm() {
+export default function BioDataForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [dob, setDob] = useState<Date>()
   const [expiry, setExpiry] = useState<Date>()
-  // console.log(dob)
-  const [showNotification, setShowNotification] = useState(false);
-  // const router = useRouter();
+const [profileImage,setProfileImage] = useState()
+
   const {
     register,
     handleSubmit,
@@ -34,6 +33,10 @@ export default function LoginForm() {
   async function onSubmit(data: LoginInputProps) {
 
   }
+  function setImageUrl(url: string | undefined): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="w-full">
       <div className="text-center border-b border-gray-200 pb-4">
@@ -41,12 +44,12 @@ export default function LoginForm() {
         <p className="text-balance text-sm text-muted-foreground">Enter your bio informations to create an Account</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className=" py-4 px-4 mx-auto">
-        {showNotification && (
+        {/* {showNotification && (
           <Alert color="failure" icon={HiInformationCircle}>
             <span className="font-medium">Wrong Token!</span> Please Check the
             token and Enter again
           </Alert>
-        )}
+        )} */}
         <div className="grid gap-4 grid-cols-2">
           {/* First Name */}
           <TextInput
@@ -124,7 +127,13 @@ export default function LoginForm() {
             <TextareaInput />
           </div>
          
-
+         {/* IMage */}
+         <ImageInput
+          label="Upload Profile Image"
+          imageUrl={profileImage} 
+          setImageUrl={setImageUrl}
+          endpoint={"doctorProfileImage"}         
+         />
         </div>
 
         {/* Submit Button */}

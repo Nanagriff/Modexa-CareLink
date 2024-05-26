@@ -3,6 +3,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import { ThemeProvider } from "@/components/theme-provider"
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "./api/uploadthing/core";
 
 
 
@@ -26,7 +29,10 @@ export default function RootLayout({
   return (
 
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>       
+      <body className={poppins.className}> 
+      <NextSSRPlugin
+          routerConfig={extractRouterConfig(ourFileRouter)}
+        />      
       <ThemeProvider
             attribute="class"
             defaultTheme="light"

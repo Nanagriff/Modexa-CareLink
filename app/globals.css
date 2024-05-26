@@ -116,3 +116,12 @@
 .date-picker .react-datepicker__input-container input {
   @apply w-full;
 }
+
+[data-ut-element="button"] {
+  background-color: #211C6A !important; /* Using the hex code directly */
+}
+
+[data-ut-element="button"] {
+  font-size: 14px;
+  padding: 10px; /* Example to decrease font size */
+}
