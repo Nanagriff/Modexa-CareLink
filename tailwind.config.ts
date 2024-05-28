@@ -1,15 +1,17 @@
-import type { Config } from "tailwindcss"
+// Import the withUt helper function from uploadthing/tw
+import { withUt } from "uploadthing/tw";
+import type { Config } from "tailwindcss";
 
-const config = {
-  darkMode: ["class"],
+// Define your existing TailwindCSS configuration
+const config: Config = {
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
     "./node_modules/flowbite-react/lib/**/*.js"
-	],
-  prefix: "",
+  ],
   theme: {
     container: {
       center: true,
@@ -83,12 +85,12 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), 
-  require('@tailwindcss/forms'),
-  require("flowbite/plugin")
-
+  plugins: [
+    require("tailwindcss-animate"), 
+    require('@tailwindcss/forms'),
+    require("flowbite/plugin")
   ],
-} satisfies Config
+};
 
-export default config
-
+// Export your configuration wrapped with the withUt function from UploadThing
+export default withUt(config);

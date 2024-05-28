@@ -21,7 +21,7 @@ export default function BioDataForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [dob, setDob] = useState<Date>()
   const [expiry, setExpiry] = useState<Date>()
-const [profileImage,setProfileImage] = useState()
+  const [profileImage, setProfileImage] = useState()
 
   const {
     register,
@@ -116,9 +116,9 @@ const [profileImage,setProfileImage] = useState()
             />
           </div>
 
-           {/* RADIO INPUT  */}
-           <div className="col-span-full sm:col-span-1">
-            <RadioGroupInput/>
+          {/* RADIO INPUT  */}
+          <div className="col-span-full sm:col-span-1">
+            <RadioGroupInput />
           </div>
 
 
@@ -126,14 +126,14 @@ const [profileImage,setProfileImage] = useState()
           <div className="col-span-full sm:col-span-1">
             <TextareaInput />
           </div>
-         
-         {/* IMage */}
-         <ImageInput
-          label="Upload Profile Image"
-          imageUrl={profileImage} 
-          setImageUrl={setImageUrl}
-          endpoint={"doctorProfileImage"}         
-         />
+
+          {/* IMage */}
+          <ImageInput
+            label="Upload Profile Image"
+            imageUrl={profileImage}
+            setImageUrl={setImageUrl}
+            endpoint={"doctorProfileImage"}
+          />
         </div>
 
         {/* Submit Button */}
