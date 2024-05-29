@@ -128,12 +128,12 @@ export default function BioDataForm() {
           </div>
 
           {/* IMage */}
-          <ImageInput
+          {/* <ImageInput
             label="Upload Profile Image"
             imageUrl={profileImage}
             setImageUrl={setImageUrl}
             endpoint={"doctorProfileImage"}
-          />
+          /> */}
         </div>
 
         {/* Submit Button */}

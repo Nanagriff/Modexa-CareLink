@@ -7,7 +7,7 @@ import { UploadDropzone } from '@/types/utils/uploadthing';
 type ImageInputProps = {
     label: string;
     imageUrl?: string;
-    setImageUrl: (url: string) => void;
+    setImageUrl: any;
     className?: string;
     endpoint: "doctorProfileImage"; // Assume 'doctorProfileImage' is the only expected endpoint for now
 };
