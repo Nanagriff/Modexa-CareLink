@@ -1,11 +1,8 @@
 "use client"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-// import { useRouter } from "next/navigation";
 import { LoginInputProps, RegisterInputProps } from "@/types/types";
 import SubmitButton from "../formInputs/SubmitButton"; // Ensure this import is correct
-
-
 import TextInput from "../formInputs/TextInput";
 import React from "react";
 import { DatePickerInput } from "../formInputs/DatePickerInput";

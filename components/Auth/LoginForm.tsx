@@ -11,6 +11,8 @@ import { LoginInputProps, RegisterInputProps } from "@/types/types";
 import SubmitButton from "../formInputs/SubmitButton"; // Ensure this import is correct
 import { Alert } from "flowbite-react";
 import { HiInformationCircle } from "react-icons/hi";
+import { SelectUser } from "../formInputs/SelectUser";
+import GoogleSignIn from "../formInputs/GoogleSignIn";
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -69,6 +71,11 @@ export default function LoginForm() {
               token and Enter again
             </Alert>
           )}
+
+          {/* Select who you are */}
+          <SelectUser />
+
+          {/* EMAIL ADDRESS INPUT  */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 dark:text-white text-gray-900">
               Email address
@@ -85,6 +92,8 @@ export default function LoginForm() {
               {errors.email && <span className="text-red-600">email is required</span>}
             </div>
           </div>
+
+          {/* Password input */}
 
           <div>
             <div className="flex items-center justify-between">
@@ -112,6 +121,7 @@ export default function LoginForm() {
             </div>
           </div>
 
+          {/* Submit login button */}
           <div>
             <SubmitButton title="Login"
               loadingTitle="Logging in please wait...."
@@ -119,13 +129,24 @@ export default function LoginForm() {
               isLoading={isLoading} />
           </div>
         </form>
-
-        <p className="mt-10 text-center text-sm dark:text-slate-200 text-gray-500">
+        {/* Don't have an account */}
+        <p className="mt-4 text-center text-sm dark:text-slate-200 text-gray-500">
           Do not have an Account?{' '}
-          <Link href="signUp" className="font-semibold leading-6 dark:text-cyan text-blue hover:text-cyan">
+          <Link href="/signUp" className="font-semibold leading-6 dark:text-cyan text-blue hover:text-cyan">
             Sign Up
           </Link>
         </p>
+
+          {/* Sign in with with  */}
+        {/* <Link href="https://support.google.com/" className="flex justify-center mt-5">
+          <div className="flex gap-5 border-1 bg-white border-black self-center text-center justify-center items-center w-full rounded-md border-0 py-1.5 dark:bg-slate-950 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
+           <Image src="/google.jpg" width={20} height={18} alt="google-log" />
+            <p className="text-center">Sign in with google</p>
+          </div>
+        </Link> */}
+        <GoogleSignIn text="Sign in"/>
+
+
       </div>
     </div>
   );
