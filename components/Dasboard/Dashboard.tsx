@@ -300,10 +300,10 @@ export function Dashboard() {
                             </Avatar>
                             <div className="grid gap-1">
                                 <p className="text-sm font-medium leading-none">
-                                    Sofia Davis
+                                    Nana Griff
                                 </p>
                                 <p className="text-sm text-muted-foreground">
-                                    sofia.davis@email.com
+                                    nanagriffiths7@gmail.com
                                 </p>
                             </div>
                             <div className="ml-auto font-medium">+$39.00</div>
