@@ -59,7 +59,7 @@ export default function Sidebar() {
     const pathname = usePathname()
     const sideBarLinks = [
         {
-            name: "Dashboard",
+            name: "Home",
             path: "/dashboard",
             icon: Home
         },
