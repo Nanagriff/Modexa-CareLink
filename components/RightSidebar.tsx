@@ -28,7 +28,7 @@ const RightSidebar = () => {
   const displayedChats = showAllChats ? chats : chats.slice(0, 2);
 
   return (
-    <div className="w-96 p-6 fixed right-0 top-0 bottom-0 overflow-y-auto bg-white text-gray-900">
+    <div className="w-80 p-6 fixed right-0 top-0 bottom-0 overflow-y-auto bg-white text-gray-900">
       <Profile doctorName="Dr. Samuel Griff" />
       <div className="mb-6">
         <ScheduleCalendar />

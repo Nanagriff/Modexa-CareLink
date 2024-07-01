@@ -1,3 +1,5 @@
+"use client";  // Add this directive at the top of your component file
+
 import React from 'react';
 import { FaUserMd, FaPhone, FaComments, FaVideo } from 'react-icons/fa';
 

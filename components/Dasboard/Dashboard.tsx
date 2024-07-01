@@ -1,4 +1,6 @@
+import StatsCard from "../StatCard";
 import WelcomeMessage from "../WelcomeMessage"
+import EducationalContent from "./EducationalContent";
 // import PatientList from "../PatientList"
 
 export function Dashboard() {
@@ -27,12 +29,13 @@ export function Dashboard() {
                 <option>December</option>
               </select>
             </div>
-            {/* <StatsCard /> */}
+            <StatsCard />
 
           </div>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">RMP</h2>
-          </div>
+          </div> */}
+          <EducationalContent/>
         </div>
       </div>
     )
