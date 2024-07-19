@@ -7,7 +7,8 @@ export const Brands = () => {
   return (
     <div className='lg:mt-[30px] bg-slate-30 overflow-hidden w-full flex flex-col gap-10 justify-center items-center'>
       <h2 className='lg:text-[32px] font-semibold dark:text-white text-black'>Our Partners</h2>
-      <p className='text-blue dark:text-white dark:opacity-70 dark:font-light mt-[-30px]'>These are our Cherishable Partners</p>
+      <p className='text-blue dark:text-white dark:opacity-70 dark:font-light mt-[-30px]'>Great partners bring
+      the greatest impact</p>
       <div className="max-w-[95%] mx-auto">
         <Marquee className='flex gap-10'>
           {companyLogos.map((logo, index) => (

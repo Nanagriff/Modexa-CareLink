@@ -85,7 +85,7 @@ export default function Footer() {
                     <div className="max-w-xs">
                         <Image alt='logo' width={30} height={30} src="/logo.jpg" />
                         <p className="leading-relaxed dark:text-white dark:opacity-60 mt-2 text-[15px]">
-                            Modexa is a digital health startup that seeks to simplify the process of gathering health data. Our goal is to help healthcare providers
+                           CareLink advances connected care, improves well-being and improves lives!
                         </p>
                     </div>
                 </div>

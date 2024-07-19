@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import ScheduleCalendar from './ScheduleCalendar';
-import Profile from './Profile';
 import ChatItem from './ChatItem';
 import ForumItem from './ForumItem';
 
@@ -29,7 +28,6 @@ const RightSidebar = () => {
 
   return (
     <div className="w-80 p-6 fixed right-0 top-0 bottom-0 overflow-y-auto bg-white text-gray-900">
-      <Profile doctorName="Dr. Samuel Griff" />
       <div className="mb-6">
         <ScheduleCalendar />
       </div>

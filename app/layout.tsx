@@ -7,14 +7,10 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 
-
-
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "500"
 });
-
 
 export const metadata: Metadata = {
   title: "Carelink app",
@@ -27,24 +23,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}> 
-      <NextSSRPlugin
-          routerConfig={extractRouterConfig(ourFileRouter)}
-        />      
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Providers>
-          {children}
-        </Providers>
+      <body id="__next" className={poppins.className}> {/* Add the ID here */}
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />      
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Providers>
+            {children}
+          </Providers>
         </ThemeProvider>
       </body>
     </html>
-
   );
 }

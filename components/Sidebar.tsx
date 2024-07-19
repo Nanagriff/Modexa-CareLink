@@ -10,9 +10,9 @@ export default function Sidebar({ onCollapseChange }: { onCollapseChange: (colla
 
   const sideBarLinks = [
     { name: 'Home', path: '/dashboard', icon: BiHomeAlt },
-    { name: 'Forums', path: '/dashboard/patients', icon: HiUsers },
-    { name: 'Sessions', path: '/dashboard/chat', icon: HiOutlineChatAlt2 },
-    { name: 'R.P.M', path: '/RPM', icon: HiOutlineCalendar },
+    { name: 'Forums', path: '/Forums', icon: HiUsers },
+    { name: 'Sessions', path: '/sessions', icon: HiOutlineChatAlt2 },
+    { name: 'E.H.R', path: '/E.H.R', icon: HiOutlineCalendar },
   ];
 
   const handleMouseEnter = () => {
