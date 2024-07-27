@@ -8,7 +8,7 @@ import SeveritySlider from './SeveritySlider';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-// Define the schema for form validation using yup
+//  schema for form validation using yup
 const schema = yup.object().shape({
   reasonForVisit: yup.string().required('Reason for visit is required'),
   symptomDescription: yup.string().required('Symptom description is required'),
@@ -20,7 +20,7 @@ const schema = yup.object().shape({
   treatmentPlan: yup.string().required('Treatment plan is required'),
 });
 
-// Define the type for form fields
+
 interface FormFields {
   reasonForVisit: string;
   symptomDescription: string;
@@ -32,7 +32,7 @@ interface FormFields {
   treatmentPlan: string;
 }
 
-// Define the type for PhysicianNotes props
+
 interface PhysicianNotesProps {
   notes: FormFields;
   onSaveNotes: (notes: FormFields) => void;
@@ -54,13 +54,13 @@ const PhysicianNotes: React.FC<PhysicianNotesProps> = ({ notes, onSaveNotes }) =
 
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">General Check-Up</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Consultation Notes</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
 
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-700 mb-4">Chief Complaint</h3>
-          <label className="block text-sm font-medium text-gray-600">Reason for Visit</label>
+          <label className="block text-sm font-medium text-gray-600">Reason for Consultation</label>
           <textarea {...register('reasonForVisit')} className="mt-1 block w-full p-3 border border-gray-600 rounded-md" placeholder="Enter reason for visit" />
           {errors.reasonForVisit && <p className="text-red-500 text-sm mt-2">{errors.reasonForVisit?.message}</p>}
         </div>

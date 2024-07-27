@@ -22,6 +22,15 @@ const MedicalSessions = () => {
   const [prescriptions, setPrescriptions] = useState<Prescription[]>([]);
   const [labOrders, setLabOrders] = useState<LabOrder[]>([]);
   const [referralOrders, setReferralOrders] = useState<ReferralOrder[]>([]);
+  const [notifications, setNotifications] = useState([]);
+  const [loginInfo, setLoginInfo] = useState({
+    loginAs: "Dr. Lorant Amo Kodieh",
+    userType: "Physician",
+    organization: "Modexa Biotech",
+    loginTime: "2024-07-27T10:00:00Z",
+    lastLogin: "2024-07-26T15:30:00Z"
+  });
+
 
   const handleCollapseChange = (collapsed: boolean) => {
     setIsSidebarCollapsed(collapsed);
@@ -78,7 +87,7 @@ const MedicalSessions = () => {
               </>
             )}
           </div>
-          <RightSidebar />
+          <RightSidebar notifications={notifications}  loginInfo={loginInfo} />
         </div>
       </div>
     </div>

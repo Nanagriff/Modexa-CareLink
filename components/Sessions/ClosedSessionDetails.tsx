@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { ClosedSession } from "@/types/types";
+import { ClosedSession } from "@/types/types"; 
 
 interface ClosedSessionDetailsProps {
   session: ClosedSession;

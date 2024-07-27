@@ -56,7 +56,7 @@ const PatientList: React.FC<{ type: string }> = ({ type }) => {
 
   const cancelAppointment = (reason: string) => {
     alert(`Appointment cancelled for reason: ${reason}`);
-    // Implement actual cancel functionality here
+    //  actual cancel functionality here
   };
 
   const indexOfLastPatient = currentPage * patientsPerPage;

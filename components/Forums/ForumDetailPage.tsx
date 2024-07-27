@@ -52,7 +52,7 @@ const forumData = {
   },
 };
 
-const currentUser = "Current User"; // Simulate the current logged-in user
+const currentUser = "Current User"; // Simulation of curent user
 
 const ForumDetailPage = () => {
   const { currentForumId, setCurrentForumId } = useAppState();
@@ -74,15 +74,15 @@ const ForumDetailPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddComment = async (postId: string, comment: string, parentCommentId?: string) => {
-    // Your comment handling logic
+    // comment handling logic
   };
 
   const handleDeleteComment = (postId: string, commentIndex: number, parentCommentId?: string) => {
-    // Your comment delete logic
+    // comment delete logic
   };
 
   const handleDeletePost = (postId: string) => {
-    // Simulate deleting a post (In a real application, this would involve an API call)
+    // API Call for deleting message 
     alert('Post deleted successfully!');
     setCurrentForumId(null); // Redirect to forum list after deleting a post
   };
@@ -163,7 +163,7 @@ const ForumDetailPage = () => {
       </button>
       <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full mb-6">
         <div className="relative">
-          <img src={forum.image} alt={forum.title} className="w-full h-96 object-cover rounded-t-lg" /> {/* Increased height */}
+          <img src={forum.image} alt={forum.title} className="w-full h-96 object-cover rounded-t-lg" /> 
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white p-4 rounded-t-lg">
             <h1 className="text-4xl font-bold">{forum.title}</h1>
             <p className="text-lg mt-2">{forum.description}</p>
@@ -180,12 +180,13 @@ const ForumDetailPage = () => {
             <FaPlus className="text-2xl" />
           </button>
 
-          {/* Modal for Creating a Post */}
-          <Modal
+           {/* Modal for Creating a Post */}
+           <Modal
             isOpen={isModalOpen}
             onRequestClose={closeModal}
             contentLabel="Create a Post"
-            className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50"
+            className="flex items-center justify-center min-h-screen"
+            overlayClassName="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
             ariaHideApp={false}
           >
             <div className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-lg mx-auto">
@@ -204,7 +205,7 @@ const ForumDetailPage = () => {
                 className="w-full p-2 border border-gray-300 rounded-lg mb-2"
                 rows={4}
               />
-              <label htmlFor="file-upload" className="cursor-pointer bg-gray-200 hover:bg-gray-300 transition duration-300 p-2 rounded-lg mb-2 flex items-center">
+              <label htmlFor="file-upload" className="cursor-pointer bg-green-600 hover:bg-green-800 transition duration-300 p-2 rounded-lg mb-2 flex items-center">
                 <FaImage className="text-xl mr-2" />
                 Choose an image
               </label>
@@ -216,7 +217,7 @@ const ForumDetailPage = () => {
               />
               <button
                 onClick={handleCreatePost}
-                className="w-full p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+                className="w-full p-2 bg-blue text-white rounded-lg hover:bg-blue-600 transition duration-300"
                 disabled={isSubmittingPost}
               >
                 {isSubmittingPost ? 'Posting...' : 'Post'}

@@ -11,7 +11,6 @@ import ActionTab from './ActionTab';
 import { Prescription } from '@/types/types';
 import VideoCall from '@/components/VideoCall/VideoCall';
 
-// Define the form fields type
 interface FormFields {
   reasonForVisit: string;
   symptomDescription: string;
@@ -100,7 +99,7 @@ const Consultation: React.FC<ConsultationProps> = ({ handleConnectionEstablished
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-1 space-y-6">
               <Vitals vitals={mockVitals} />
-              <div className="h-30"> {/* Set fixed height for Nurse's Notes */}
+              <div className="h-30"> 
                 <NursesNotes notes={nursesNotes} />
               </div>
             </div>
@@ -119,7 +118,7 @@ const Consultation: React.FC<ConsultationProps> = ({ handleConnectionEstablished
           <div className="space-y-6">
             <PhysicianNotes notes={physicianNotes} onSaveNotes={setPhysicianNotes as (notes: FormFields) => void} />
             <div className="flex justify-center">
-              <div className="w-full md:w-1/2"> {/* Centered and set width to half of the container */}
+              <div className="w-full md:w-1/2"> 
                 <ActionTab
                   prescriptions={prescriptions}
                   labOrders={labOrders}

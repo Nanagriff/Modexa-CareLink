@@ -5,7 +5,7 @@ import React from 'react'
 function EducationalContent() {
     return (
         <>
-            <h1 className='font-semibold text-[24px]'>Education</h1>
+            <h1 className='font-semibold text-[24px]'>News</h1>
             <div className='flex gap-10'>
                 {/* First image of the article */}
             <div className='w-[347px]  bg-gray-200 border-top-right-radius: 0.75rem'>

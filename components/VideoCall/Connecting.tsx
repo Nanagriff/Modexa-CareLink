@@ -20,7 +20,7 @@ const Connecting: React.FC<ConnectingProps> = ({ onConnected }) => {
         <div className="spinner-border text-primary" role="status">
           <span className="sr-only">Connecting...</span>
         </div>
-        <p className="mt-3">Connecting to the call...</p>
+        <p className="mt-3">Connecting Patient...</p>
       </div>
     </div>
   );

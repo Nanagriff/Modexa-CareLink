@@ -1,21 +1,73 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface ReferralOrder {
+  patientName: string;
+  patientId: string;
+  dateOfBirth: string;
+  gender: string;
+  referralDate: string;
+  referringPhysician: string;
+  specialty: string;
+  subSpecialty: string;
   reasonForReferral: string;
-  specialist: string;
-  appointmentDate: string;
-  notes: string;
+  clinicalHistory: string;
+  currentMedications: string;
+  locationOfOrganization: string;
+  preferredFacility: string;
+  otherFacility: string;
 }
 
 interface ReferralOrderFormProps {
   referralOrders: ReferralOrder[];
   onSave: (newReferralOrders: ReferralOrder[]) => void;
+  patientDetails?: {
+    name: string;
+    id: string;
+    dateOfBirth: string;
+    gender: string;
+  };
+  loggedInDoctor: string;
 }
 
-const ReferralOrderForm: React.FC<ReferralOrderFormProps> = ({ referralOrders, onSave }) => {
+const specialties: { [key: string]: string[] } = {
+  General: [],
+  Cardiology: ["Interventional Cardiology", "Electrophysiology", "Heart Failure"],
+  Neurology: ["Stroke", "Epilepsy", "Neurodegenerative Disorders"],
+  Orthopedics: ["Spine Surgery", "Sports Medicine", "Joint Replacement"],
+  Pediatrics: ["Neonatology", "Pediatric Cardiology", "Pediatric Neurology"],
+};
+
+const regions: string[] = ["Greater Accra", "Ashanti", "Western", "Eastern", "Volta", "Central", "Northern", "Upper East", "Upper West", "Bono", "Bono East", "Ahafo", "Western North", "Oti", "North East", "Savannah"];
+
+const hospitals: { [key: string]: string[] } = {
+  "Greater Accra": ["Korle Bu Teaching Hospital", "37 Military Hospital", "Ridge Hospital"],
+  "Ashanti": ["Komfo Anokye Teaching Hospital", "Manhyia District Hospital"],
+  "Western": ["Effia-Nkwanta Regional Hospital"],
+  "Eastern": ["Koforidua Regional Hospital"],
+  "Volta": ["Ho Teaching Hospital"],
+  "Central": ["Cape Coast Teaching Hospital"],
+  "Northern": ["Tamale Teaching Hospital"],
+  "Upper East": ["Bolgatanga Regional Hospital"],
+  "Upper West": ["Wa Regional Hospital"],
+  "Bono": ["Sunyani Regional Hospital"],
+  "Bono East": ["Techiman Holy Family Hospital"],
+  "Ahafo": ["Goaso Municipal Hospital"],
+  "Western North": ["Sefwi Wiawso Municipal Hospital"],
+  "Oti": ["Jasikan District Hospital"],
+  "North East": ["Nalerigu Baptist Medical Centre"],
+  "Savannah": ["Damongo District Hospital"],
+};
+
+const ReferralOrderForm: React.FC<ReferralOrderFormProps> = ({ referralOrders, onSave, patientDetails, loggedInDoctor }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentReferralOrders, setCurrentReferralOrders] = useState<ReferralOrder[]>(referralOrders);
+  const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
+  const [selectedRegion, setSelectedRegion] = useState<string>("");
+
+  useEffect(() => {
+    setCurrentReferralOrders(referralOrders);
+  }, [referralOrders]);
 
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -31,10 +83,20 @@ const ReferralOrderForm: React.FC<ReferralOrderFormProps> = ({ referralOrders, o
     setCurrentReferralOrders([
       ...currentReferralOrders,
       {
+        patientName: patientDetails?.name || '',
+        patientId: patientDetails?.id || '',
+        dateOfBirth: patientDetails?.dateOfBirth || '',
+        gender: patientDetails?.gender || '',
+        referralDate: new Date().toISOString().split('T')[0],
+        referringPhysician: loggedInDoctor,
+        specialty: '',
+        subSpecialty: '',
         reasonForReferral: '',
-        specialist: '',
-        appointmentDate: '',
-        notes: '',
+        clinicalHistory: '',
+        currentMedications: '',
+        locationOfOrganization: '',
+        preferredFacility: '',
+        otherFacility: '',
       },
     ]);
   };
@@ -54,7 +116,6 @@ const ReferralOrderForm: React.FC<ReferralOrderFormProps> = ({ referralOrders, o
     if (confirmSave) {
       onSave(currentReferralOrders);
       setIsExpanded(false);
-      console.log("Saved");
     }
   };
 
@@ -76,34 +137,137 @@ const ReferralOrderForm: React.FC<ReferralOrderFormProps> = ({ referralOrders, o
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
-                  name="reasonForReferral"
-                  placeholder="Reason for Referral"
-                  value={referralOrder.reasonForReferral}
-                  onChange={(e) => handleInputChange(index, 'reasonForReferral', e.target.value)}
+                  name="patientName"
+                  placeholder="Patient Name"
+                  value={referralOrder.patientName}
+                  readOnly
                   className="p-2 border rounded"
                 />
                 <input
                   type="text"
-                  name="specialist"
-                  placeholder="Specialist"
-                  value={referralOrder.specialist}
-                  onChange={(e) => handleInputChange(index, 'specialist', e.target.value)}
+                  name="patientId"
+                  placeholder="Patient ID"
+                  value={referralOrder.patientId}
+                  readOnly
                   className="p-2 border rounded"
                 />
                 <input
                   type="date"
-                  name="appointmentDate"
-                  value={referralOrder.appointmentDate}
-                  onChange={(e) => handleInputChange(index, 'appointmentDate', e.target.value)}
+                  name="dateOfBirth"
+                  placeholder="Date of Birth"
+                  value={referralOrder.dateOfBirth}
+                  readOnly
                   className="p-2 border rounded"
                 />
-                <textarea
-                  name="notes"
-                  placeholder="Notes"
-                  value={referralOrder.notes}
-                  onChange={(e) => handleInputChange(index, 'notes', e.target.value)}
+                <input
+                  type="text"
+                  name="gender"
+                  placeholder="Gender"
+                  value={referralOrder.gender}
+                  readOnly
+                  className="p-2 border rounded"
+                />
+                <input
+                  type="date"
+                  name="referralDate"
+                  placeholder="Referral Date"
+                  value={referralOrder.referralDate}
+                  readOnly
+                  className="p-2 border rounded"
+                />
+                <input
+                  type="text"
+                  name="referringPhysician"
+                  placeholder="Referring Physician"
+                  value={referralOrder.referringPhysician}
+                  readOnly
+                  className="p-2 border rounded"
+                />
+                <select
+                  name="specialty"
+                  value={referralOrder.specialty}
+                  onChange={(e) => {
+                    handleInputChange(index, 'specialty', e.target.value);
+                    setSelectedSpecialty(e.target.value);
+                  }}
+                  className="p-2 border rounded"
+                >
+                  <option value="">Select Specialty</option>
+                  {Object.keys(specialties).map(specialty => (
+                    <option key={specialty} value={specialty}>{specialty}</option>
+                  ))}
+                </select>
+                <select
+                  name="subSpecialty"
+                  value={referralOrder.subSpecialty}
+                  onChange={(e) => handleInputChange(index, 'subSpecialty', e.target.value)}
+                  className="p-2 border rounded"
+                  disabled={!selectedSpecialty}
+                >
+                  <option value="">Select Sub-Specialty</option>
+                  {specialties[selectedSpecialty]?.map(subSpecialty => (
+                    <option key={subSpecialty} value={subSpecialty}>{subSpecialty}</option>
+                  ))}
+                </select>
+                <input
+                  type="text"
+                  name="reasonForReferral"
+                  placeholder="Reason for Referral"
+                  value={referralOrder.reasonForReferral}
+                  onChange={(e) => handleInputChange(index, 'reasonForReferral', e.target.value)}
                   className="p-2 border rounded col-span-2"
                 />
+                <textarea
+                  name="clinicalHistory"
+                  placeholder="Clinical History"
+                  value={referralOrder.clinicalHistory}
+                  onChange={(e) => handleInputChange(index, 'clinicalHistory', e.target.value)}
+                  className="p-2 border rounded col-span-2"
+                />
+                <textarea
+                  name="currentMedications"
+                  placeholder="Current Medications"
+                  value={referralOrder.currentMedications}
+                  onChange={(e) => handleInputChange(index, 'currentMedications', e.target.value)}
+                  className="p-2 border rounded col-span-2"
+                />
+                <select
+                  name="locationOfOrganization"
+                  value={referralOrder.locationOfOrganization}
+                  onChange={(e) => {
+                    handleInputChange(index, 'locationOfOrganization', e.target.value);
+                    setSelectedRegion(e.target.value);
+                  }}
+                  className="p-2 border rounded col-span-2"
+                >
+                  <option value="">Select Region</option>
+                  {regions.map(region => (
+                    <option key={region} value={region}>{region}</option>
+                  ))}
+                </select>
+                <select
+                  name="preferredFacility"
+                  value={referralOrder.preferredFacility}
+                  onChange={(e) => handleInputChange(index, 'preferredFacility', e.target.value)}
+                  className="p-2 border rounded col-span-2"
+                  disabled={!selectedRegion}
+                >
+                  <option value="">Select Facility</option>
+                  {hospitals[selectedRegion]?.map(facility => (
+                    <option key={facility} value={facility}>{facility}</option>
+                  ))}
+                  <option value="Other">Other</option>
+                </select>
+                {referralOrder.preferredFacility === "Other" && (
+                  <input
+                    type="text"
+                    name="otherFacility"
+                    placeholder="Specify Other Facility"
+                    value={referralOrder.otherFacility}
+                    onChange={(e) => handleInputChange(index, 'otherFacility', e.target.value)}
+                    className="p-2 border rounded col-span-2"
+                  />
+                )}
               </div>
               <button
                 onClick={() => handleDeleteReferralOrder(index)}

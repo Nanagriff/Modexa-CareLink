@@ -17,7 +17,7 @@ const ConsultationManager: React.FC = () => {
 
   const handleDeclineCall = () => {
     console.log("Call declined.");
-    // Handle decline call logic here
+    // decline call logic here
   };
 
   const handleConnectionEstablished = () => {

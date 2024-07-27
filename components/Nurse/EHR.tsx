@@ -1,14 +1,12 @@
-"use client"; // Add this line at the top
+"use client"; 
 
 import React, { useState } from 'react';
-import Sidebar from '@/components/Sidebar';
+import Sidebar from '@/components/Nurse/Sidebar';
 import RightSidebar from '@/components/RightSidebar';
 import SearchBar from '@/components/EHR/SearchBar';
 import SearchResults from '@/components/EHR/SearchResults';
-import PatientDetails from '@/components/EHR/PatientDetails';
-import { Result } from '@/types/types'; // Update import
-
-
+import PatientDetails from './PatientDetails';
+import { Result } from '@/types/types'; 
 
 
 
@@ -473,50 +471,60 @@ const dummyResults: Result[] = [
 
 
 const EHRPage = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<Result[]>([]);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [selectedPatient, setSelectedPatient] = useState<Result | null>(null);
-
-  const handleSearch = (query: string) => {
-    setQuery(query);
-    const filteredResults = dummyResults.filter(
-      (result) =>
-        result.name.toLowerCase().includes(query.toLowerCase()) ||
-        result.studentID.toLowerCase().includes(query.toLowerCase()) ||
-        result.indexNo.toLowerCase().includes(query.toLowerCase())
-    );
-    setResults(filteredResults);
-  };
-
-  const handleCollapseChange = (collapsed: boolean) => {
-    setIsSidebarCollapsed(collapsed);
-  };
-
-  const handlePatientClick = (patient: Result) => {
-    setSelectedPatient(patient);
-  };
-
-  return (
-    <div className="flex h-screen">
-      <Sidebar onCollapseChange={handleCollapseChange} />
-      <div className={`flex-1 flex flex-col bg-gray-100 overflow-hidden transition-all duration-300 ${isSidebarCollapsed ? 'ml-16' : 'ml-48'}`}>
-
-        <div className="flex-1 flex p-6 space-x-6 overflow-auto">
-          {!selectedPatient ? (
-            <div className="flex-1 max-w-full lg:max-w-3xl xl:max-w-4xl space-y-6">
-              <h1 className="text-3xl font-bold">EHR</h1>
-              <SearchBar onSearch={handleSearch} />
-              <SearchResults query={query} results={results} onPatientClick={handlePatientClick} />
+    const [query, setQuery] = useState('');
+    const [results, setResults] = useState<Result[]>([]);
+    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    const [selectedPatient, setSelectedPatient] = useState<Result | null>(null);
+    const [notifications, setNotifications] = useState([]);
+    const [notes, setNotes] = useState([]);
+    const [loginInfo, setLoginInfo] = useState({
+      loginAs: "Jane Doe",
+      userType: "Nurse",
+      organization: "St. James Seminary SHS",
+      loginTime: "2024-07-24T08:30:00Z", // Placeholder date
+      lastLogin: "2024-07-23T18:00:00Z" // Placeholder date
+    });
+  
+    const handleSearch = (query: string) => {
+      setQuery(query);
+      const filteredResults = dummyResults.filter(
+        (result) =>
+          result.name.toLowerCase().includes(query.toLowerCase()) ||
+          result.studentID.toLowerCase().includes(query.toLowerCase()) ||
+          result.indexNo.toLowerCase().includes(query.toLowerCase())
+      );
+      setResults(filteredResults);
+    };
+  
+    const handleCollapseChange = (collapsed: boolean) => {
+      setIsSidebarCollapsed(collapsed);
+    };
+  
+    const handlePatientClick = (patient: Result) => {
+      setSelectedPatient(patient);
+    };
+  
+    return (
+      <div className="flex h-screen overflow-hidden">
+        <Sidebar onCollapseChange={handleCollapseChange} />
+        <div className={`flex-1 flex flex-col bg-gray-100 transition-all duration-300 ${isSidebarCollapsed ? 'ml-16' : 'ml-20'}`}>
+          <div className="flex-1 flex p-6 overflow-auto">
+            <div className="flex-1 max-w-full">
+              {!selectedPatient ? (
+                <div className="space-y-6">
+                  <h1 className="text-3xl font-bold">EHR</h1>
+                  <SearchBar onSearch={handleSearch} />
+                  <SearchResults query={query} results={results} onPatientClick={handlePatientClick} />
+                </div>
+              ) : (
+                <PatientDetails patient={selectedPatient} onBack={() => setSelectedPatient(null)} />
+              )}
             </div>
-          ) : (
-            <PatientDetails patient={selectedPatient} onBack={() => setSelectedPatient(null)} />
-          )}
-          <RightSidebar />
+          </div>
         </div>
+        <RightSidebar notifications={notifications}  loginInfo={loginInfo} />
       </div>
-    </div>
-  );
-};
-
-export default EHRPage;
+    );
+  };
+  
+  export default EHRPage;

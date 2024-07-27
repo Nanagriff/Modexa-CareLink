@@ -1,7 +1,7 @@
 import React from 'react';
 
 const tips = [
-  "Don't Kill any more patients",
+  "Effective Communication",
   "Don't feed them the beans, we're out of ...",
   "Don't unplug the guy on life support, agai...",
 ];

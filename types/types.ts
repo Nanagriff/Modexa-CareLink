@@ -13,6 +13,7 @@ export interface Test {
   addedBy: string;
   time: string;
   date: string;
+  
 }
 
 export interface Prescription {
@@ -100,8 +101,8 @@ export interface CommentProps {
 export interface LabOrder {
   id: string;
   name: string;
-  result: string; // Add this
-  time: string; // Add this
+  result: string; 
+  time: string; 
   // other properties...
 }
 
@@ -111,3 +112,51 @@ export type ReferralOrder = {
   date: string;
   time: string;
 };
+
+export interface ClosedSession {
+  id: number;
+  name: string;
+  age: number;
+  sex: string;
+  organization: string;
+  date: string;
+  time: string;
+  duration: string;
+  doctor: string;
+  sessionType: string;
+  symptoms: string;
+  consultationNotes: string;
+  diagnosis: string;
+  prescription: string;
+  followUpInstructions: string;
+  attachments: {
+    name: string;
+    url: string;
+  }[];
+  additionalNotes: string;
+}
+
+export interface VitalsData {
+  bloodPressureSystolic: string;
+  bloodPressureDiastolic: string;
+  temperature: string;
+  temperatureDevice: string;
+  weight: string;
+  weightUnit: string;
+  spo2: string;
+  spo2Device: string;
+  bloodGlucose: string;
+  pulse: string;
+}
+
+type Note = {
+  title: string;
+  content: string;
+  date: string;
+};
+
+export interface LoginInputProps {
+  // Define your form fields here
+  school: string;
+  graduation: string;
+}

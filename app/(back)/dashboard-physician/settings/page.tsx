@@ -1,11 +1,11 @@
 
-import { Dashboard } from '@/components/Dasboard/Dashboard'
+import Settings from '@/components/Dasboard/settings/Settings'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-      <Dashboard />
+      <Settings />
     </div>
   )
 }

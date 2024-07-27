@@ -106,7 +106,7 @@ const RxHx: React.FC<RxHxProps> = ({ prescriptions, onSave }) => {
                   className="p-2 border rounded"
                 >
                   <option value="">Select Frequency</option>
-                  <option value="QD">QD</option>
+                  <option value="QD">OD</option>
                   <option value="BID">BID</option>
                   <option value="TID">TID</option>
                 </select>

@@ -23,7 +23,7 @@ const HomePage = () => {
     <AppStateProvider>
       <div className="flex h-screen">
         <Sidebar onCollapseChange={handleCollapseChange} />
-        <div className={`flex-1 flex flex-col ${isSidebarCollapsed ? 'ml-16' : 'ml-64'} transition-all duration-300`}>
+        <div className={`flex-1 flex flex-col ${isSidebarCollapsed ? 'ml-16' : 'ml-24'} transition-all duration-300`}>
           <Navbar />
           <div className="flex-1 flex">
             <div className="flex-1 p-4 mr-4">

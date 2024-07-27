@@ -238,7 +238,7 @@
 }
 
 .spinner-border.text-primary {
-  color: #0d6efd;
+  color: hsl(216, 98%, 18%);
 }
 
 @keyframes spinner-border {
@@ -250,3 +250,37 @@
 .mt-3 {
   margin-top: 1rem;
 }
+
+/* Custom styles for the brand boxes */
+.brand-box {
+  transition: all 0.3s ease;
+}
+
+.brand-box:hover {
+  background-color: #031738; /* Tailwind's blue-500 */
+  border-color: rgb(1, 30, 77); /* Tailwind's blue-500 */
+  color: white;
+}
+
+.brand-box img {
+  transition: all 0.3s ease;
+}
+
+.brand-box:hover img {
+  filter: invert(1) brightness(0);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
