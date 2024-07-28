@@ -1,13 +1,13 @@
 // RxTab.tsx
 import React from 'react';
-import { Prescription } from '@/types/types';
+// import { Prescription } from '@/types/types';
 import PreviousPrescriptions from './PreviousPrescriptions';
 import RxHx from './RX';
 
-interface RxTabProps {
-  prescriptions: Prescription[];
-  onSave: (newPrescriptions: Prescription[]) => void;
-}
+// interface RxTabProps {
+//   prescriptions: Prescription[];
+//   onSave: (newPrescriptions: Prescription[]) => void;
+// }
 
 const RxTab: React.FC<RxTabProps> = ({ prescriptions, onSave }) => {
   return (
