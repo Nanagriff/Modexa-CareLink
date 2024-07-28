@@ -1,4 +1,5 @@
 // RxTab.tsx
+// The correction has been made 
 import React from 'react';
 import { Prescription } from '@/types/types';
 import PreviousPrescriptions from './PreviousPrescriptions';
