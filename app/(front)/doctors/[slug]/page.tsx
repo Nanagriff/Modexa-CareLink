@@ -18,7 +18,7 @@ export default function page() {
                 <p className='text-gray-500'>Mental Health</p>
               </div>
               <div className="py-3">
-                <p>Tele Helath</p>
+                <p>Consult</p>
                 <p>Tse Addo Street, Accra Gh</p>
               </div>
             </div>

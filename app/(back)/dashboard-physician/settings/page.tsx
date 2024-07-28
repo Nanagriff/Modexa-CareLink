@@ -1,10 +1,11 @@
-import Appointments from '@/components/Dasboard/appointments/appointments'
+
+import Settings from '@/components/Dasboard/settings/Settings'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-     <Appointments/>
+      <Settings />
     </div>
   )
 }

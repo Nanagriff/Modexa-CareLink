@@ -1,6 +1,20 @@
+import ghs from "../assets/ghs.png";
+import nugs from "../assets/nugs.png";
+import { StaticImageData } from "next/image";
 
-import ghs from "../assets/ghs.png"
-import nugs from "../assets/nugs.png"
+export interface CompanyLogo {
+  src: StaticImageData;
+  category: string;
+}
 
-export const companyLogos = [  ghs,,nugs,ghs,nugs,ghs,nugs,ghs,nugs,ghs]
-
+export const companyLogos: CompanyLogo[] = [
+  { src: ghs, category: 'Healthcare' },
+  { src: nugs, category: 'Patient organizations' },
+  { src: ghs, category: 'Healthcare' },
+  { src: nugs, category: 'Patient organizations' },
+  { src: ghs, category: 'Healthcare' },
+  { src: nugs, category: 'Patient organizations' },
+  { src: ghs, category: 'Healthcare' },
+  { src: nugs, category: 'Patient organizations' },
+  { src: ghs, category: 'Healthcare' },
+];
