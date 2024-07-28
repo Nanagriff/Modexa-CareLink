@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-export default function EducationalInfo() {
+interface EducationalInfoProps {
+  onComplete?: () => void; // Optional onComplete function
+}
+
+export default function EducationalInfo({ onComplete }: EducationalInfoProps) {
+  const handleCompletion = () => {
+    if (onComplete) {
+      onComplete(); // Call onComplete when this component is completed
+    }
+  };
+
   return (
     <div>
-      Education Information
+      <h1>Education Information</h1>
+      {/* Add your form or content here */}
+      <button onClick={handleCompletion}>Complete Section</button>
     </div>
-  )
+  );
 }

@@ -87,7 +87,6 @@ export default function SignupForm({ role = "SERVICE_PROVIDERS", plan }: { role?
                         Sign In
                     </Link>
                 </p>
-
                 {/* Google sign in  */}
                 <GoogleSignIn text="Sign up"/>
             </div>
